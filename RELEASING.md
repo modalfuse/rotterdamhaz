@@ -7,7 +7,7 @@ The data files are the 1.0.1 package. `SHA256SUMS` lists those files. `LICENSE`,
 ## Version DOIs
 
 - RotterdamHaz 1.0.0: https://doi.org/10.5281/zenodo.23568109. Tag `v1.0.0` is unchanged. The file on that Zenodo record stays the 1.0.0 archive, and the code archive inside it keeps its original filename.
-- RotterdamHaz 1.0.1: the version DOI is written here after the Zenodo draft returns. Tag `v1.0.1` is created on the commit that records that DOI.
+- RotterdamHaz 1.0.1: https://doi.org/10.5281/zenodo.23579821. Tag `v1.0.1` is the commit that records this DOI.
 
 ## Check
 
@@ -15,4 +15,4 @@ The data files are the 1.0.1 package. `SHA256SUMS` lists those files. `LICENSE`,
 
 ## Zenodo
 
-1.0.1 is a new version of Zenodo record 23568109. It does not replace the 1.0.0 file. After the version DOI exists, fill `CITATION.cff`, the README citation line and this note, and update the `README.md` line in `SHA256SUMS`.
+1.0.1 is a new version of Zenodo record 23568109. It does not replace the 1.0.0 file. The version DOI is https://doi.org/10.5281/zenodo.23579821.

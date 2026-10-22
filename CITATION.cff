@@ -4,7 +4,7 @@ type: dataset
 title: "RotterdamHaz: an open benchmark dataset for hazmat road transport risk"
 date-released: "2026-10-23"
 version: "1.0.1"
-doi: "10.5281/zenodo.23568109"
+doi: "10.5281/zenodo.23579821"
 authors:
   - family-names: "Liu"
     given-names: "Qiang"
