@@ -1,4 +1,4 @@
-# RotterdamHaz
+# RotterdamHaz: an open benchmark dataset for hazmat road transport risk
 
 > STATUS: 1.0.0, repository https://github.com/modalfuse/rotterdamhaz. Dataset DOI: https://doi.org/10.5281/zenodo.23568109.
 
@@ -41,7 +41,12 @@ Instance IDs keep the region prefix `rijnmond_` (region identifier used in the p
 5. Assemble with `python -m hazbench.release regions/rotterdam.yaml <out_dir> <release_dir> ...` and compare with `sha256sum -c SHA256SUMS`. A same-seed rebuild reproduces all 54 generated data files byte-for-byte (QA check 9).
 
 ## Citation
-Liu, Q. et al. (2026). RotterdamHaz (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23568109.
+
+Cite this dataset archive:
+
+> Liu Q. RotterdamHaz: an open benchmark dataset for hazmat road transport risk. Zenodo. https://doi.org/10.5281/zenodo.23568109
+
+Citation metadata are also provided in `CITATION.cff`. Please cite the accompanying manuscript when referring to the scientific findings. The manuscript title is *RotterdamHaz: A Hazmat Road Transport Risk Benchmark for the Rotterdam–Rijnmond Port and Industrial Area*.
 
 ## Licence
 Network-derived data (network and everything computed on it): ODbL 1.0, © OpenStreetMap contributors. Other data and documentation:

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below."
+message: "If you use this dataset, please cite this archive. Cite the accompanying manuscript when referring to the scientific findings."
 type: dataset
-title: "RotterdamHaz"
+title: "RotterdamHaz: an open benchmark dataset for hazmat road transport risk"
 date-released: "2026-10-22"
 version: "1.0.0"
 doi: "10.5281/zenodo.23568109"
