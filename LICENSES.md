@@ -1,4 +1,4 @@
-# Licences — RotterdamHaz 1.0.0
+# Licences — RotterdamHaz 1.0.1
 
 Decided by Q. Liu (2026-10-21): network-derived data under ODbL 1.0, other data under CC BY 4.0, code under MIT.
 
@@ -14,6 +14,7 @@ on the network, form a Derivative Database and are offered under ODbL 1.0 (share
 - `instances/` (all benchmark instances)
 - `calibration_sites.csv`, `plausibility_flows.csv`, `plausibility_lengths.csv`, `plausibility_magnitude_basisnet.csv`
 - `results/` (baselines, stratified baselines, cross-validation, OD sensitivity)
+- `light-build/` csv, npz and tif files computed on the network (fit, sensitivity, cross-validation and value-of-time tables and rasters)
 
 **Attribution (required):** "Contains information from OpenStreetMap, © OpenStreetMap contributors, which is made available under the
 Open Database License (ODbL) 1.0 — https://www.openstreetmap.org/copyright".
@@ -25,12 +26,13 @@ Full text: https://creativecommons.org/licenses/by/4.0/legalcode
 - `params.yaml`, `DATA_SOURCES.csv`, `erg2024_radii.csv`, `accident_rates_harwood1990.csv`
 - `DATA_DICTIONARY.md`, `data_dictionary.csv`, `qa_results.json`, `QUALITY_REPORT.txt`, `build_log.txt`
 - `README.md`, `LICENSES.md`, `THIRD_PARTY_DATA.md`, `config/` (region configuration and source table)
+- `light-build/README.md` and the text logs under `light-build/`
 
-Suggested attribution: "RotterdamHaz 1.0.0, Q. Liu et al. (2026), CC BY 4.0" plus the source attributions in `THIRD_PARTY_DATA.md`
+Suggested attribution: "RotterdamHaz 1.0.1, Q. Liu et al. (2026), CC BY 4.0" plus the source attributions in `THIRD_PARTY_DATA.md`
 (CBS and EEA require attribution; Rijkswaterstaat / PDOK inputs are CC0 or public domain).
 
 ## 3. MIT License — code
-Applies to `code/rotterdamhaz-code-v1.0.0.tgz` (hazbench builder, scripts, tests), `requirements.txt`, `environment.yml`.
+Applies to `code/rotterdamhaz-code-v1.0.1.tgz` (hazbench builder, scripts, tests), `requirements.txt`, `environment.yml`, and the Python scripts under `light-build/`.
 
 ```
 MIT License

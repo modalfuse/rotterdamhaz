@@ -1,0 +1,63 @@
+arcs.csv rows 80610; self-loops 333 (removed: [{'u': 43939475, 'v': 43939475, 'name': 'Mesdagstraat', 'length_km': 0.11098}, {'u': 43940923, 'v': 43940923, 'name': 'Johan Vermeerstraat', 'length_km': 0.11016}, {'u': 43948122, 'v': 43948122, 'name': 'Jan Tooropstraat', 'length_km': 0.04564}, {'u': 43949016, 'v': 43949016, 'name': 'Jan Tooropstraat', 'length_km': 0.04191}, {'u': 43957935, 'v': 43957935, 'name': 'Ben Goerionstraat', 'length_km': 0.07687}] ...); duplicates 0
+built-up rule (WKD <= 50 km/h): 77322 arcs decided by WKD, 2006 by OSM class; changed 9355 arcs (2215 km): {'expressway': {'expressway': 679, 'national': 0, 'provincial': 0, 'urban': 0}, 'national': {'expressway': 0, 'national': 270, 'provincial': 0, 'urban': 0}, 'provincial': {'expressway': 0, 'national': 0, 'provincial': 2113, 'urban': 4592}, 'urban': {'expressway': 0, 'national': 0, 'provincial': 4763, 'urban': 67860}}; km by acc_class {'expressway': 418.0, 'national': 111.0, 'provincial': 2138.0, 'urban': 6534.0}
+OSM way match: mean length fraction 1.000; arcs fully unmatched 6
+hazmat status table: {'unknown': 79981, 'allowed_corridor': 296}; tunnel arcs by category {'C': 18, 'D': 4}
+toll A24 Blankenburgverbinding: 9.49 EUR / 71.8 EUR/h = 7.93 min on 2 arcs
+CBS 100 m (2023) total in raster 2080272; park employment E total 132070 on 9783 cells; polygons by kind {'other_industrial': 556, 'chemical_storage': 126, 'logistics': 38}
+radius benzene 300 m: nnz 1896050
+radius benzene_iso 50 m: nnz 107014
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 41476, Σtons 701.0 x10^4 t, loaded trips/day 835, risk-modelled share 0.86 rows
+OD base: rows 42080, Σtons 934.0 x10^4 t, loaded trips/day 1113, risk-modelled share 0.86 rows
+OD high: rows 42526, Σtons 1168.0 x10^4 t, loaded trips/day 1391, risk-modelled share 0.86 rows
+AON base: arcs with flow 5079; gateway trip share 0.300; corridor arcs flow-km share 0.428
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 86.53 -> 7.35; rows scaled 23286/25367; class trips 301723 -> 341437
+calibration class2: 37 matched sites of 39; median GEH 28.79 -> 11.82; rows scaled 7711/10800; class trips 75931 -> 84693
+instances from od_base_calibrated (Σtons 1045.5 x10^4 t, loaded trips/day 1245)
+{'gateway_share': 0.3, 'total_base_fit_10kt': np.float64(931.2), 'class3_median_ratio_after_scaling': 1.0, 'class2_median_ratio_after_scaling': 0.7561303400408679, 'median_abs_log_ratio': 0.5927334138353013, 'sites_model_zero': 13, 'n_sites': 37}
+arcs.csv rows 80610; self-loops 333 (removed: [{'u': 43939475, 'v': 43939475, 'name': 'Mesdagstraat', 'length_km': 0.11098}, {'u': 43940923, 'v': 43940923, 'name': 'Johan Vermeerstraat', 'length_km': 0.11016}, {'u': 43948122, 'v': 43948122, 'name': 'Jan Tooropstraat', 'length_km': 0.04564}, {'u': 43949016, 'v': 43949016, 'name': 'Jan Tooropstraat', 'length_km': 0.04191}, {'u': 43957935, 'v': 43957935, 'name': 'Ben Goerionstraat', 'length_km': 0.07687}] ...); duplicates 0
+built-up rule (WKD <= 50 km/h): 77322 arcs decided by WKD, 2006 by OSM class; changed 9355 arcs (2215 km): {'expressway': {'expressway': 679, 'national': 0, 'provincial': 0, 'urban': 0}, 'national': {'expressway': 0, 'national': 270, 'provincial': 0, 'urban': 0}, 'provincial': {'expressway': 0, 'national': 0, 'provincial': 2113, 'urban': 4592}, 'urban': {'expressway': 0, 'national': 0, 'provincial': 4763, 'urban': 67860}}; km by acc_class {'expressway': 418.0, 'national': 111.0, 'provincial': 2138.0, 'urban': 6534.0}
+OSM way match: mean length fraction 1.000; arcs fully unmatched 6
+hazmat status table: {'unknown': 79981, 'allowed_corridor': 296}; tunnel arcs by category {'C': 18, 'D': 4}
+toll A24 Blankenburgverbinding: 9.49 EUR / 71.8 EUR/h = 7.93 min on 2 arcs
+CBS 100 m (2023) total in raster 2080272; park employment E total 132070 on 9783 cells; polygons by kind {'other_industrial': 556, 'chemical_storage': 126, 'logistics': 38}
+radius benzene 300 m: nnz 1896050
+radius benzene_iso 50 m: nnz 107014
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 41032, Σtons 701.0 x10^4 t, loaded trips/day 835, risk-modelled share 0.86 rows
+OD base: rows 41563, Σtons 934.0 x10^4 t, loaded trips/day 1113, risk-modelled share 0.86 rows
+OD high: rows 41994, Σtons 1168.0 x10^4 t, loaded trips/day 1391, risk-modelled share 0.86 rows
+AON base: arcs with flow 5079; gateway trip share 0.500; corridor arcs flow-km share 0.461
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 85.02 -> 8.83; rows scaled 23282/25363; class trips 301722 -> 300372
+calibration class2: 37 matched sites of 39; median GEH 31.22 -> 11.82; rows scaled 7342/10314; class trips 75931 -> 72404
+instances from od_base_calibrated (Σtons 922.8 x10^4 t, loaded trips/day 1099)
+{'gateway_share': 0.5, 'total_base_fit_10kt': np.float64(878.6), 'class3_median_ratio_after_scaling': 1.0, 'class2_median_ratio_after_scaling': 1.077825072035175, 'median_abs_log_ratio': 0.515344996585446, 'sites_model_zero': 13, 'n_sites': 37}
+   gateway_share  total_base_fit_10kt  class3_median_ratio_after_scaling  class2_median_ratio_after_scaling  median_abs_log_ratio  sites_model_zero  n_sites
+0            0.3                931.2                                1.0                           0.756130              0.592733                13       37
+1            0.5                878.6                                1.0                           1.077825              0.515345                13       37

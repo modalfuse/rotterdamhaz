@@ -1,0 +1,247 @@
+arcs.csv rows 80610; self-loops 333 (removed: [{'u': 43939475, 'v': 43939475, 'name': 'Mesdagstraat', 'length_km': 0.11098}, {'u': 43940923, 'v': 43940923, 'name': 'Johan Vermeerstraat', 'length_km': 0.11016}, {'u': 43948122, 'v': 43948122, 'name': 'Jan Tooropstraat', 'length_km': 0.04564}, {'u': 43949016, 'v': 43949016, 'name': 'Jan Tooropstraat', 'length_km': 0.04191}, {'u': 43957935, 'v': 43957935, 'name': 'Ben Goerionstraat', 'length_km': 0.07687}] ...); duplicates 0
+built-up rule (WKD <= 50 km/h): 77322 arcs decided by WKD, 2006 by OSM class; changed 9355 arcs (2215 km): {'expressway': {'expressway': 679, 'national': 0, 'provincial': 0, 'urban': 0}, 'national': {'expressway': 0, 'national': 270, 'provincial': 0, 'urban': 0}, 'provincial': {'expressway': 0, 'national': 0, 'provincial': 2113, 'urban': 4592}, 'urban': {'expressway': 0, 'national': 0, 'provincial': 4763, 'urban': 67860}}; km by acc_class {'expressway': 418.0, 'national': 111.0, 'provincial': 2138.0, 'urban': 6534.0}
+OSM way match: mean length fraction 1.000; arcs fully unmatched 6
+hazmat status table: {'unknown': 79981, 'allowed_corridor': 296}; tunnel arcs by category {'C': 18, 'D': 4}
+toll A24 Blankenburgverbinding: 9.49 EUR / 71.8 EUR/h = 7.93 min on 2 arcs
+CBS 100 m (2023) total in raster 2080272; park employment E total 132070 on 9783 cells; polygons by kind {'other_industrial': 556, 'chemical_storage': 126, 'logistics': 38}
+radius benzene 300 m: nnz 1896050
+radius benzene_iso 50 m: nnz 107014
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40853, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41408, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41856, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5050; gateway trip share 0.500; corridor arcs flow-km share 0.464
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 80.47 -> 9.35; rows scaled 23260/25341; class trips 283955 -> 287832
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 886.7 x10^4 t, loaded trips/day 1056)
+{'variant': 'vot_x0.5', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(886.7), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.747), 'class3_ratio_before_median': 0.884, 'class3_ratio_after_median': 0.989, 'class3_GEH_before_median': 80.5, 'class3_GEH_after_median': 9.3, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.184), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 35.9, 'toll_min': 15.86, 'Z152_class3_ratio_before': 0.0, 'Z152_class3_ratio_after': 0.0, 'Z152_class3_GEH_after': 84.8, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40873, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41433, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41868, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5061; gateway trip share 0.500; corridor arcs flow-km share 0.463
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 78.48 -> 8.95; rows scaled 23277/25358; class trips 283955 -> 291452
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 895.1 x10^4 t, loaded trips/day 1066)
+{'variant': 'vot_x0.75', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(895.1), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.749), 'class3_ratio_before_median': 0.884, 'class3_ratio_after_median': 0.989, 'class3_GEH_before_median': 78.5, 'class3_GEH_after_median': 8.9, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.182), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 53.85, 'toll_min': 10.57, 'Z152_class3_ratio_before': 0.525, 'Z152_class3_ratio_after': 0.973, 'Z152_class3_GEH_after': 1.6, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40890, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41444, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41878, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5078; gateway trip share 0.500; corridor arcs flow-km share 0.461
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 78.48 -> 8.15; rows scaled 23280/25361; class trips 283955 -> 291582
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 895.4 x10^4 t, loaded trips/day 1067)
+{'variant': 'vot_x0.95', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(895.4), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.749), 'class3_ratio_before_median': 1.013, 'class3_ratio_after_median': 0.996, 'class3_GEH_before_median': 78.5, 'class3_GEH_after_median': 8.2, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.182), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 68.21, 'toll_min': 8.35, 'Z152_class3_ratio_before': 1.052, 'Z152_class3_ratio_after': 0.996, 'Z152_class3_GEH_after': 0.3, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40898, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41445, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41879, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5079; gateway trip share 0.500; corridor arcs flow-km share 0.461
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 78.49 -> 8.83; rows scaled 23281/25362; class trips 283955 -> 295362
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 904.1 x10^4 t, loaded trips/day 1077)
+{'variant': 'vot_x1', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(904.1), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.751), 'class3_ratio_before_median': 0.897, 'class3_ratio_after_median': 0.989, 'class3_GEH_before_median': 78.5, 'class3_GEH_after_median': 8.8, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.181), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 71.8, 'toll_min': 7.93, 'Z152_class3_ratio_before': 4.271, 'Z152_class3_ratio_after': 0.856, 'Z152_class3_GEH_after': 8.9, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40900, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41449, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41881, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.461
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 78.66 -> 8.66; rows scaled 23281/25362; class trips 283955 -> 296401
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 906.5 x10^4 t, loaded trips/day 1080)
+{'variant': 'vot_x1.05', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(906.5), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.752), 'class3_ratio_before_median': 0.884, 'class3_ratio_after_median': 0.989, 'class3_GEH_before_median': 78.7, 'class3_GEH_after_median': 8.7, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.18), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 75.39, 'toll_min': 7.55, 'Z152_class3_ratio_before': 4.6, 'Z152_class3_ratio_after': 0.856, 'Z152_class3_GEH_after': 9.0, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40917, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41460, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41882, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.459
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 77.67 -> 6.96; rows scaled 23282/25363; class trips 283955 -> 301349
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 917.8 x10^4 t, loaded trips/day 1093)
+{'variant': 'vot_x1.25', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(917.8), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.755), 'class3_ratio_before_median': 0.881, 'class3_ratio_after_median': 0.989, 'class3_GEH_before_median': 77.7, 'class3_GEH_after_median': 7.0, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.178), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 89.75, 'toll_min': 6.34, 'Z152_class3_ratio_before': 7.885, 'Z152_class3_ratio_after': 0.827, 'Z152_class3_GEH_after': 10.8, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40928, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41465, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41889, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.458
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 77.67 -> 7.05; rows scaled 23283/25364; class trips 283955 -> 301731
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 918.7 x10^4 t, loaded trips/day 1094)
+{'variant': 'vot_x1.5', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(918.7), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.755), 'class3_ratio_before_median': 0.88, 'class3_ratio_after_median': 0.988, 'class3_GEH_before_median': 77.7, 'class3_GEH_after_median': 7.0, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.178), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 107.7, 'toll_min': 5.29, 'Z152_class3_ratio_before': 8.569, 'Z152_class3_ratio_after': 0.87, 'Z152_class3_GEH_after': 8.0, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40945, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41473, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41903, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.458
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 80.47 -> 6.39; rows scaled 23284/25365; class trips 283955 -> 302428
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 920.3 x10^4 t, loaded trips/day 1096)
+{'variant': 'vot_x2', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(920.3), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.756), 'class3_ratio_before_median': 0.878, 'class3_ratio_after_median': 0.987, 'class3_GEH_before_median': 80.5, 'class3_GEH_after_median': 6.4, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.177), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 143.6, 'toll_min': 3.97, 'Z152_class3_ratio_before': 9.256, 'Z152_class3_ratio_after': 0.954, 'Z152_class3_GEH_after': 2.8, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40962, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41483, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41917, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.458
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 77.67 -> 6.13; rows scaled 23287/25368; class trips 283955 -> 302781
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 921.1 x10^4 t, loaded trips/day 1097)
+{'variant': 'vot_x3', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(921.1), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.756), 'class3_ratio_before_median': 0.876, 'class3_ratio_after_median': 0.99, 'class3_GEH_before_median': 77.7, 'class3_GEH_after_median': 6.1, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.177), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': 215.4, 'toll_min': 2.64, 'Z152_class3_ratio_before': 9.898, 'Z152_class3_ratio_after': 0.991, 'Z152_class3_GEH_after': 0.5, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40995, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41530, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41951, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5080; gateway trip share 0.500; corridor arcs flow-km share 0.459
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 77.67 -> 7.64; rows scaled 23295/25376; class trips 283955 -> 303999
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 923.9 x10^4 t, loaded trips/day 1101)
+{'variant': 'no_toll', 'total_10kt': np.float64(879.0), 'total_cal_10kt': np.float64(923.9), 'class3_share_gravity': np.float64(0.743), 'class3_share_cal': np.float64(0.757), 'class3_ratio_before_median': 0.874, 'class3_ratio_after_median': 0.99, 'class3_GEH_before_median': 77.7, 'class3_GEH_after_median': 7.6, 'class2_share_gravity': np.float64(0.187), 'class2_share_cal': np.float64(0.177), 'class2_ratio_before_median': 1.078, 'class2_ratio_after_median': 0.94, 'class2_GEH_before_median': 30.8, 'class2_GEH_after_median': 12.6, 'vot_eur_h': inf, 'toll_min': 0.0, 'Z152_class3_ratio_before': 11.969, 'Z152_class3_ratio_after': 1.014, 'Z152_class3_GEH_after': 0.8, 'Z152_class2_ratio_before': None, 'Z152_class2_ratio_after': None, 'Z152_class2_GEH_after': 0.0}
+     variant  total_10kt  total_cal_10kt  class3_share_gravity  class3_share_cal  class3_ratio_before_median  class3_ratio_after_median  class3_GEH_before_median  class3_GEH_after_median  class2_share_gravity  class2_share_cal  class2_ratio_before_median  class2_ratio_after_median  class2_GEH_before_median  class2_GEH_after_median  vot_eur_h  toll_min  Z152_class3_ratio_before  Z152_class3_ratio_after  Z152_class3_GEH_after Z152_class2_ratio_before Z152_class2_ratio_after  Z152_class2_GEH_after
+0   vot_x0.5       879.0           886.7                 0.743             0.747                       0.884                      0.989                      80.5                      9.3                 0.187             0.184                       1.078                       0.94                      30.8                     12.6      35.90     15.86                     0.000                    0.000                   84.8                     None                    None                    0.0
+1  vot_x0.75       879.0           895.1                 0.743             0.749                       0.884                      0.989                      78.5                      8.9                 0.187             0.182                       1.078                       0.94                      30.8                     12.6      53.85     10.57                     0.525                    0.973                    1.6                     None                    None                    0.0
+2  vot_x0.95       879.0           895.4                 0.743             0.749                       1.013                      0.996                      78.5                      8.2                 0.187             0.182                       1.078                       0.94                      30.8                     12.6      68.21      8.35                     1.052                    0.996                    0.3                     None                    None                    0.0
+3     vot_x1       879.0           904.1                 0.743             0.751                       0.897                      0.989                      78.5                      8.8                 0.187             0.181                       1.078                       0.94                      30.8                     12.6      71.80      7.93                     4.271                    0.856                    8.9                     None                    None                    0.0
+4  vot_x1.05       879.0           906.5                 0.743             0.752                       0.884                      0.989                      78.7                      8.7                 0.187             0.180                       1.078                       0.94                      30.8                     12.6      75.39      7.55                     4.600                    0.856                    9.0                     None                    None                    0.0
+5  vot_x1.25       879.0           917.8                 0.743             0.755                       0.881                      0.989                      77.7                      7.0                 0.187             0.178                       1.078                       0.94                      30.8                     12.6      89.75      6.34                     7.885                    0.827                   10.8                     None                    None                    0.0
+6   vot_x1.5       879.0           918.7                 0.743             0.755                       0.880                      0.988                      77.7                      7.0                 0.187             0.178                       1.078                       0.94                      30.8                     12.6     107.70      5.29                     8.569                    0.870                    8.0                     None                    None                    0.0
+7     vot_x2       879.0           920.3                 0.743             0.756                       0.878                      0.987                      80.5                      6.4                 0.187             0.177                       1.078                       0.94                      30.8                     12.6     143.60      3.97                     9.256                    0.954                    2.8                     None                    None                    0.0
+8     vot_x3       879.0           921.1                 0.743             0.756                       0.876                      0.990                      77.7                      6.1                 0.187             0.177                       1.078                       0.94                      30.8                     12.6     215.40      2.64                     9.898                    0.991                    0.5                     None                    None                    0.0
+9    no_toll       879.0           923.9                 0.743             0.757                       0.874                      0.990                      77.7                      7.6                 0.187             0.177                       1.078                       0.94                      30.8                     12.6        inf      0.00                    11.969                    1.014                    0.8                     None                    None                    0.0

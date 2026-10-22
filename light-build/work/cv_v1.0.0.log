@@ -1,0 +1,34 @@
+arcs.csv rows 80610; self-loops 333 (removed: [{'u': 43939475, 'v': 43939475, 'name': 'Mesdagstraat', 'length_km': 0.11098}, {'u': 43940923, 'v': 43940923, 'name': 'Johan Vermeerstraat', 'length_km': 0.11016}, {'u': 43948122, 'v': 43948122, 'name': 'Jan Tooropstraat', 'length_km': 0.04564}, {'u': 43949016, 'v': 43949016, 'name': 'Jan Tooropstraat', 'length_km': 0.04191}, {'u': 43957935, 'v': 43957935, 'name': 'Ben Goerionstraat', 'length_km': 0.07687}] ...); duplicates 0
+built-up rule (WKD <= 50 km/h): 77322 arcs decided by WKD, 2006 by OSM class; changed 9355 arcs (2215 km): {'expressway': {'expressway': 679, 'national': 0, 'provincial': 0, 'urban': 0}, 'national': {'expressway': 0, 'national': 270, 'provincial': 0, 'urban': 0}, 'provincial': {'expressway': 0, 'national': 0, 'provincial': 2113, 'urban': 4592}, 'urban': {'expressway': 0, 'national': 0, 'provincial': 4763, 'urban': 67860}}; km by acc_class {'expressway': 418.0, 'national': 111.0, 'provincial': 2138.0, 'urban': 6534.0}
+OSM way match: mean length fraction 1.000; arcs fully unmatched 6
+hazmat status table: {'unknown': 79981, 'allowed_corridor': 296}; tunnel arcs by category {'C': 18, 'D': 4}
+toll A24 Blankenburgverbinding: 9.49 EUR / 71.8 EUR/h = 7.93 min on 2 arcs
+CBS 100 m (2023) total in raster 2080272; park employment E total 132070 on 9783 cells; polygons by kind {'other_industrial': 556, 'chemical_storage': 126, 'logistics': 38}
+radius benzene 300 m: nnz 1896050
+radius benzene_iso 50 m: nnz 107014
+tunnel restriction ['D', 'E']: 4 arcs removed for classes ['class3']
+tunnel restriction ['B', 'C', 'D', 'E']: 22 arcs removed for classes ['class2']
+OSM polygon w134893915 (Distripark Maasvlakte, 133.2 ha) excluded by name
+OSM polygon w144928922 (TEAM Terminal, 30.8 ha) excluded by name
+OSM polygon w145473873 (EMO, 170.9 ha) excluded by name
+OSM polygon w146663057 (TEAM Terminal, 39.7 ha) excluded by name
+OSM polygon w636039312 (Impala Terminals, 36.4 ha) excluded by name
+gen points 88 {'chemical': 65, 'port': 18, 'refinery': 5}; attractions 285 {'fuel_station': 220, 'chemical_firm': 65}; gateways 5
+class2: destinations unreachable on the class graph, attraction set to 0: ['W_3622585694']
+OD low: rows 40898, Σtons 659.0 x10^4 t, loaded trips/day 785, risk-modelled share 0.86 rows
+OD base: rows 41445, Σtons 879.0 x10^4 t, loaded trips/day 1047, risk-modelled share 0.86 rows
+OD high: rows 41879, Σtons 1099.0 x10^4 t, loaded trips/day 1309, risk-modelled share 0.86 rows
+AON base: arcs with flow 5079; gateway trip share 0.500; corridor arcs flow-km share 0.461
+calibration site Z152: manual location [4.27236, 51.90546] (was 4.27359, 51.90149)
+calibration site Z47: manual arc filter {'tunnel_cat': ['C']}: 4 -> 2 arcs
+calibration site Z148: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration site Z69: manual arc filter {'tunnel_cat': ['D']}: 4 -> 2 arcs
+calibration site Z68: manual arc filter {'tunnel_cat': ['']}: 4 -> 2 arcs
+calibration class3: 37 matched sites of 39; median GEH 78.49 -> 8.83; rows scaled 23281/25362; class trips 283955 -> 295362
+calibration class2: 37 matched sites of 39; median GEH 29.71 -> 11.82; rows scaled 7262/10208; class trips 71459 -> 70957
+instances from od_base_calibrated (Σtons 904.1 x10^4 t, loaded trips/day 1077)
+  scheme     cls   n  GEH_before_median  GEH_heldout_median  GEH_insample_median  GEH_heldout_lt5_share  GEH_heldout_lt10_share  absLogRatio_before_median  absLogRatio_heldout_median  ratio_heldout_median  ratio_heldout_q1  ratio_heldout_q3  sites_model_zero_heldout
+0    loo  class3  37             78.490               42.45                8.830               0.081081                0.162162                   0.579550                    0.392725              0.976426          0.454815          1.319196                         3
+1    loo  class2  34             30.805               18.67               12.595               0.117647                0.205882                   0.415154                    0.269970              0.732017          0.000000          1.046571                        10
+2   road  class3  37             78.490               82.03                8.830               0.027027                0.027027                   0.579550                    0.853166              0.921494          0.066782          1.850796                         3
+3   road  class2  34             30.805               20.45               12.595               0.176471                0.235294                   0.415154                    0.264316              0.814911          0.000000          1.164898                        10
