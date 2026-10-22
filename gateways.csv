@@ -1,0 +1,6 @@
+id,name,node,type,lon,lat,weight,weight_src
+W_1402771461,A4 north (Delft / The Hague),1402771461,gateway,4.3293996,51.9833366,24611.0,VGS 2025 Z33 LF+GF+GT (estimated)
+W_1402735015,A13 north (Delft / The Hague),1402735015,gateway,4.382254,51.9943775,7147.0,VGS 2025 Z30 LF+GF+GT (estimated)
+W_1404073778,A20 east (Gouda / Utrecht),1404073778,gateway,4.5550226,51.954335,29697.0,VGS 2025 Z51 LF+GF+GT (estimated)
+W_44195071,"A15/A16 east (Ridderkerk: Dordrecht, Gorinchem)",44195071,gateway,4.5784365,51.8778444,95483.0,VGS 2025 Z55 LF+GF+GT (estimated)
+W_3622585694,"A29 south (Heinenoord: Zeeland, Antwerp)",3622585694,gateway,4.4889712,51.8148569,896.0,VGS 2025 Z88 LF+GF+GT (estimated)

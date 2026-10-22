@@ -1,0 +1,7 @@
+name: rotterdamhaz
+channels: [conda-forge]
+dependencies:
+  - python=3.13
+  - gdal=3.12.2
+  - pip
+  - pip: ["-r requirements.txt"]

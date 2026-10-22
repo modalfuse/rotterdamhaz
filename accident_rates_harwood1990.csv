@@ -1,0 +1,10 @@
+area,roadway,truck_accidents_per_million_veh_mi,p_release_given_accident,releases_per_million_veh_mi,harwood_class,accident_rate_per_vehkm,releasing_accident_rate_per_vehkm
+rural,two_lane,2.19,0.086,0.19,rural_two_lane,1.3608e-06,1.17029e-07
+rural,multilane_undivided,4.49,0.081,0.36,rural_multilane_undivided,2.78996e-06,2.25986e-07
+rural,multilane_divided,2.15,0.082,0.18,rural_multilane_divided,1.33595e-06,1.09548e-07
+rural,freeway,0.64,0.09,0.06,rural_freeway,3.97678e-07,3.5791e-08
+urban,two_lane,8.66,0.069,0.6,urban_two_lane,5.38107e-06,3.71294e-07
+urban,multilane_undivided,13.92,0.055,0.77,urban_multilane_undivided,8.64949e-06,4.75722e-07
+urban,multilane_divided,12.47,0.062,0.77,urban_multilane_divided,7.7485e-06,4.80407e-07
+urban,one_way,9.7,0.056,0.54,urban_one_way,6.0273e-06,3.37529e-07
+urban,freeway,2.18,0.062,0.14,urban_freeway,1.35459e-06,8.39845e-08

@@ -1,0 +1,97 @@
+# RotterdamHaz model parameters, version 1.0.0.
+# Every value has a row in rotterdam.sources.csv (copied to <build>/DATA_SOURCES.csv): URL / document, value, derivation, label
+# (official / real / estimated / assumed). Derivation notes recorded on 2026-10-19.
+version: 1.0.0  # 2026-10-20: value of time at 2026 prices; OD total refit with the A24 toll
+# 2026-10-20: A24 toll as generalized time (decision Q. Liu 01:25)
+seed: 42
+# characteristic tank contents, RIVM Rekenvoorschrift Omgevingsveiligheid Module III (2025) Table 4.1 / RBM II Table 4.17:
+# LF and LT 23 t, GT 16 t (GF 50 m3). Payload only converts tons <-> trips; OD trips are calibrated to VGS truck counts.
+load_t: {base: 23.0, sens: 16.0}
+# lambda = release (>100 kg) frequency per loaded tank-truck km on an average road:
+# BRON injury+fatal accidents with >=1 truck (OTE 21/22/23), 2018-2024: 4318 / CBS 85395NED truck-km in NL (vrachtauto+trekker,
+# NL+foreign) 51,743.6 million km = 8.345e-8 per truck-km (annual min 7.379e-8 (2021), max 9.596e-8 (2018))
+# x RBM II P(release > 100 kg | injury accident), atmospheric tank, generic road = 0.093 (RBM II Achtergronddocument Table 4.22)
+lambda_base: {base: 7.761e-9, low: 6.862e-9, high: 8.925e-9}
+# P(release | accident), RBM II Table 4.22 generic road: atmospheric 0.093, pressure 0.043 (comparison / documentation only; not used by the builder)
+p_release: {base: 0.093, low: 0.043}
+a_nontraffic: 0.0  # Dutch method (RBM II / Module III): road frequencies are accident-based only; 0.33 (T/CAWS 0025-2025) = sensitivity
+# Pi = P(high-consequence event | release of an atmospheric-tank-equivalent), by substance type; per substance in Pi_substance
+Pi: {toxic: {base: 0.462, range: [0.286, 0.515]}, flammable: {base: 0.13, range: [0.01, 0.13]}}
+# pressure-tank substances: x (pu pressure / pu atmospheric) = 0.043/0.093 = 0.462 (road-type range 0.286-0.515, RBM II Table 4.22);
+# flammable: x direct-ignition probability (Module III Table 4.3: LF2 0.13, LF1 0.01, GF1-3 0.8); toxic gases: lethality not applied (1)
+Pi_substance: {benzene: 0.13, lpg: 0.370, ammonia: 0.462, chlorine: 0.462}
+substance_type: {chlorine: toxic, ammonia: toxic, lpg: flammable, benzene: flammable}
+road_mult:  # first scheme = default lambda_arc; normalised by the builder (length-weighted mean = lambda_base)
+  RBMII: {expressway: 1.0, national: 1.0, provincial: 3.307, urban: 1.478}  # RBM II Fb x pu(atmospheric): motorway 8.3e-8 x 0.101, outside built-up 3.6e-7 x 0.077, inside built-up 5.9e-7 x 0.021
+  RBMII_pressure: {expressway: 1.0, national: 1.0, provincial: 2.836, urban: 0.820}  # sensitivity: Fb x pu(pressure) 0.052 / 0.034 / 0.006
+  uniform: {expressway: 1.0, national: 1.0, provincial: 1.0, urban: 1.0}  # sensitivity: national BRON average on every road
+# OSM class -> Dutch road type (Module III 4.1.1: auto(snel)wegen = physically separated, mostly >= 100 km/h; buiten bebouwde kom <= 80;
+# binnen bebouwde kom 50). trunk (autoweg) -> motorway type; primary/secondary -> outside built-up; tertiary/residential/unclassified -> inside built-up (assumed mapping)
+acc_class_map: {motorway: expressway, trunk: national, primary: provincial, secondary: provincial, tertiary: urban, residential: urban, unclassified: urban}
+# (item 6): for the non-motorway classes the legal speed limit (RWS WKD, via NWB wegvak; hazbench.prep.wkd_speed) decides the road type:
+# <= 50 km/h -> inside built-up area (RBM II 'binnen bebouwde kom', urban); > 50 km/h -> outside built-up area (provincial). Arcs with < 50 % of
+# their length matched to a WKD limit keep the OSM-class mapping above.
+builtup_rule: {urban_max_kmh: 50, apply_classes: [primary, secondary, tertiary, unclassified, residential], min_match_frac: 0.5, urban_class: urban, rural_class: provincial}
+underreport: [1, 3, 10]  # item 9: sensitivity multipliers on lambda (risk scales linearly; reported in stats); BRON truck accidents all severities / injury+fatal = 7.96 (2018-2024)
+A1_curve: {min_deflection_deg: 10, curve_max_radius_m: 1000}
+A1_factors: {curve_lt200: 1.0, curve_200_max: 1.0, tunnel: 1.0, bridge: 1.0}  # not applied: Dutch method has no geometry factors (T/CAWS Table C.1 values = sensitivity)
+A2: {base: 1.0, note: "no DEM; flat terrain (Rijnmond is below/near sea level)", levels: [1.0]}
+A3: {base: 1.0, rain_fog: 1.5, snow_hail: 2.5}  # base 1 (no weather factor in RBM II); rain_fog/snow_hail = T/CAWS sensitivity values, not used
+A4_by_class: {motorway: 1.0, trunk: 1.0, primary: 1.0, secondary: 1.0, tertiary: 1.0, residential: 1.0, unclassified: 1.0, other: 1.0}  # not applied (Dutch method)
+A5_A7: {base: 1.0, sens_uniform_factor: [0.8, 1.5]}
+default_lanes: {motorway: 3, trunk: 2, primary: 2, secondary: 1, tertiary: 1, residential: 1, unclassified: 1}  # assumed (only where OSM has no lanes tag)
+# day-time workers on industrial / port land: 107,416 direct port jobs Rotterdam-Rijnmond 2023 (Havenmonitor 2024, Table 5) /
+# 7,966 ha port land area (Port of Rotterdam facts & figures 2021) = 13.5 jobs/ha; range 8.6 (/12,464 ha land+water) - 17.2 (/6,260 ha rentable sites).
+# Jobs are not simultaneous presence (shifts, part-time) -> upper-side estimate; one value for all kinds (no differentiated Dutch source)
+park_density_per_ha: {chemical_storage: 13.5, logistics: 13.5, other_industrial: 13.5}
+# OSM name patterns (Dutch/English, case-insensitive via (?i))
+chem_name_regex: "(?i)chemi|petrochem|raffinader|refiner|olie|oil|gas|lng|lpg|methanol|ethyl|propyl|benzeen|benzene|polymer|tank|terminal"
+logistics_name_regex: "(?i)logisti|distributi|warehouse|opslag|depot|overslag|haven|port"
+port_name_regex: "(?i)haven|port|terminal|kade|steiger|overslag"
+petro_zone_bbox: [3.98, 51.86, 4.42, 51.97]  # Maasvlakte - Europoort - Botlek - Pernis - Vondelingenplaat (assumed extent)
+min_gen_area_ha: 5  # assumed
+snap_check_m: 300  # assumed
+fixed_origins: {}
+od_totals_10kt:  # unit 10^4 t/year; base calibrated so that modelled class-3 flows match RWS VGS counts (median ratio 1); low/high = 0.75 / 1.25 x base (assumed)
+  total: {low: 659, base: 879, high: 1099}  # 1.0.0: 878.6 at gateway_share 0.5, A24 toll, value of time 71.8 EUR/h (fit 2026-10-20)
+  refinery: {low: 212, base: 282, high: 353}  # assumed share of the fitted total. No Dutch source for the refinery / port / chemical split. Sensitivity in scripts/sens_od.py
+  port: {low: 212, base: 282, high: 353}
+yield: 0.9  # not used by the builder
+# hazmat class mix: Rijkswaterstaat VGS counts 2025 (loaded tank trucks/year), sum over the 39 Basisnet sections in the network bbox:
+# LF 1,086,820 (class3), GF1-3 + GT3-5 273,160 (class2), LT + GF0 + GT0-2 102,405 (other) -> 0.743 / 0.187 / 0.070. Same for all origin types (no per-origin data)
+# (item 2, decision 2026-10-19): keep the VGS count shares (class 2 = 0.187); calibration to the VGS class-2 counts corrects the level.
+# Sensitivity: class 2 = 0.09, class 3 absorbs the difference (scripts/sens_od.py).
+class_split_sens: {class2: 0.09}
+class_split:
+  refinery: {class3: 0.743, class2: 0.187, other: 0.070}
+  port: {class3: 0.743, class2: 0.187, other: 0.070}
+  chemical: {class3: 0.743, class2: 0.187, other: 0.070}
+substance_split:  # representative substances (RIVM example substances: LF2 pentane/benzine, GF3 propane, GT3 ammonia, GT4/5 chlorine)
+  class3: {benzene: 1.0}  # LF stands in for petrol/diesel (LF2 share of LF counts 0.653)
+  class2: {lpg: 0.989, ammonia: 0.0095, chlorine: 0.0015}  # VGS: GF1-3 / GT3 / GT4+GT5 shares of class 2
+  other: {other: 1.0}
+gateway_share: 0.5  # 1.0.0: median |log(model/observed)| 0.60 at 0.5, 0.78 at 0.3
+port_weighting: capacity  # (decision Q. Liu 2026-10-19 19:35): port tonnage split by public tank storage capacity (m3; region facilities.port_terminals.terminals[].capacity_m3), was site area
+refinery_weighting: capacity  # (decision Q. Liu 2026-10-19 17:58): refinery tonnage split by crude capacity (kb/d; region facilities.port_terminals.refinery_capacity), was site area
+gateway_weighting: weight  # gateway attraction proportional to gateways.weight (VGS counts on the boundary sections)
+deterrence: power
+beta: 2.0  # assumed, sensitivity 1.5 / 2.5 (item 4: od_base_beta*.csv + scripts/sens_od.py)
+beta_sens: [1.5, 2.0, 2.5]
+min_od_10kt: 1.0e-5  # 0.1 t/year; OD rows below are dropped (1e-3 removed ~1% of the tonnage -> QA check 7)
+instance_K: [10, 30, 100]
+IR_zone: {vulnerable_objects: 1.0e-6, less_vulnerable: 1.0e-6}  # Bkl art. 5.7: PR 10^-6 limit for (very) vulnerable buildings; 10^-6 standard value for less vulnerable
+PLL_weight: [1.0]
+# ADR 2025 tunnel restriction codes (Table A col. 15; 8.6.4), carriage in tanks: LPG UN1965 (B/D) -> B,C,D,E; ammonia UN1005 and chlorine UN1017
+# (C/D) -> C,D,E; benzene UN1114 (D/E) -> D,E; 'other' (LT, GF0) assumed D,E. Arc categories from VLG art. 3 (hazbench.prep.hazmat_status)
+tunnel_forbidden: {lpg: [B, C, D, E], ammonia: [C, D, E], chlorine: [C, D, E], benzene: [D, E], default: [D, E]}
+corridors: []  # Basisnet routes enter via network.hazmat_status_csv, not by name
+corridors_en: []
+# (decision Q. Liu 2026-10-20 01:25): per-trip toll on the A24 Blankenburgverbinding as generalized time for routing
+# KiM (2023) value of travel time, road freight, 63.1 EUR/h per vehicle at price level 2022, indexed to 2026 with CBS CPI (all items):
+# CBS 83131NED (2015=100) annual 2022 121.43 -> 2025 134.56 (x1.1081); CBS 86141NED (2025=100) mean Jan-Sep 2026 102.66 (x1.0266) -> x1.1376
+vot_truck_eur_h: 71.8  # 63.1 x 1.1376 = 71.78 EUR/h, price level 2026
+vot_base_2022_eur_h: 63.1  # KiM (2023), price level 2022 (documentation only)
+vot_cpi_factor: 1.1376  # CBS CPI 2022 -> 2026 (see above; documentation only)
+vot_sens_factor: [1.5]  # assumed: hazmat drivers (ADR certificate) / insurance -> higher VoT; scripts/sens_od.py variant vot_x1.5
+tolls:
+  - {name: "A24 Blankenburgverbinding", match: "Maasdeltatunnel", road_class: [motorway], toll_eur: 9.49}  # Regeling tijdelijke tolheffing art. 2(1)(b), > 3500 kg, price level 2026

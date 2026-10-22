@@ -1,0 +1,89 @@
+id,name,node,type,area_ha,snap_dist_m,weight_src,capacity_m3,capacity_kbd,needs_manual_check,Q_base_10kt
+G01,Facility G01 (port),44250761,port,5.01,664.6,facility list point; area of REV site polygon (official),1623000.0,,True,48.662
+G02,Facility G02 (port),6100414897,port,64.26,218.7,facility list point; area of REV site polygon (official),1348000.0,,False,40.417
+G03,Facility G03 (port),2637452940,port,7.9,161.5,facility list point; area of REV site polygon (official),662000.0,,False,19.849
+G04,Facility G04 (port),44218014,port,2.22,151.8,facility list point; area of REV site polygon (official),92000.0,,False,2.758
+G05,Facility G05 (port),44462167,port,13.64,115.6,facility list point; area of OSM industrial polygon with the terminal name (ODbL),257000.0,,False,7.706
+G06,Facility G06 (port),1432950906,port,31.36,816.6,facility list point; area of OSM industrial polygon with the terminal name (ODbL),720000.0,,True,21.588
+G07,Facility G07 (port),44202605,port,9.46,171.0,facility list point; area of OSM industrial polygon with the terminal name (ODbL),468500.0,,False,14.047
+G08,Facility G08 (port),44264652,port,2.52,100.3,facility list point; area of REV site polygon (official),61500.0,,False,1.844
+G09,Facility G09 (port),44250761,port,17.56,313.5,facility list point; area of OSM industrial polygon with the terminal name (ODbL),174000.0,,True,5.217
+G10,Facility G10 (port),44250761,port,6.11,582.3,facility list point; area of REV site polygon (official),326860.0,,True,9.8
+G11,Facility G11 (port),9698875963,port,0.55,134.0,facility list point; area of REV site polygon (official),29423.0,,False,0.882
+G12,Facility G12 (port),44205832,port,4.82,226.1,facility list point; area of REV site polygon (official),219371.0,,False,6.577
+G13,Facility G13 (port),44267480,port,16.37,173.3,facility list point; area of REV site polygon (official),326036.0,,False,9.776
+G14,Facility G14 (port),44267480,port,11.64,59.5,facility list point; area of REV site polygon (official),242154.0,,False,7.26
+G15,Facility G15 (port),44205832,port,12.57,427.5,facility list point; area of OSM industrial polygon with the terminal name (ODbL),306600.0,,True,9.193
+G16,Facility G16 (port),44250761,port,9.84,678.7,facility list point; area of OSM industrial polygon with the terminal name (ODbL),526400.0,,True,15.783
+G17,Facility G17 (port),4549936892,port,13.8,131.8,facility list point; area of OSM industrial polygon with the terminal name (ODbL),622503.0,,False,18.664
+G18,Facility G18 (port),1490139028,port,28.88,375.9,facility list point; area of REV site polygon (official),1400000.0,,True,41.976
+G19,Facility G19 (chemical),409151876,chemical,25.05,397.0,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,4.837
+G20,Facility G20 (chemical),44440603,chemical,30.52,251.8,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,5.893
+G21,Facility G21 (chemical),1295296225,chemical,10.95,264.6,facility register point; area of enclosing OSM polygon (other_industrial),,,False,2.114
+G22,Facility G22 (chemical),6007643831,chemical,46.84,136.1,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,9.044
+G23,Facility G23 (chemical),304145117,chemical,382.46,770.3,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,73.849
+G24,Facility G24 (chemical),6625425709,chemical,22.08,555.0,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,4.263
+G25,Facility G25 (chemical),7055889770,chemical,9.55,99.5,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,1.844
+G26,Facility G26 (refinery),1497276008,refinery,177.17,374.0,facility register point; area of enclosing OSM polygon (chemical_storage),,191.0,True,44.514
+G27,Facility G27 (chemical),1497276008,chemical,10.0,514.2,facility register point; area from register or default (assumed),,,True,1.931
+G28,Facility G28 (chemical),13769476917,chemical,9.26,124.4,facility register point; area of enclosing OSM polygon (other_industrial),,,False,1.788
+G29,Facility G29 (chemical),44308461,chemical,13.99,232.0,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.701
+G30,Facility G30 (chemical),2240055440,chemical,13.3,30.5,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.568
+G31,Facility G31 (chemical),1497360504,chemical,13.59,205.2,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.624
+G32,Facility G32 (chemical),44264652,chemical,14.07,127.2,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.717
+G33,Facility G33 (chemical),44236816,chemical,13.99,69.7,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.701
+G34,Facility G34 (chemical),12390205545,chemical,10.0,95.5,facility register point; area from register or default (assumed),,,False,1.931
+G35,Facility G35 (chemical),4538549212,chemical,10.0,132.1,facility register point; area from register or default (assumed),,,False,1.931
+G36,Facility G36 (chemical),9421380507,chemical,13.51,358.0,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,2.609
+G37,Facility G37 (chemical),44234229,chemical,41.63,35.0,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,8.038
+G38,Facility G38 (chemical),44218014,chemical,10.0,125.5,facility register point; area from register or default (assumed),,,False,1.931
+G39,Facility G39 (chemical),9350424808,chemical,41.24,452.2,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,7.963
+G40,Facility G40 (chemical),409151876,chemical,10.0,95.2,facility register point; area from register or default (assumed),,,False,1.931
+G41,Facility G41 (chemical),3104397381,chemical,10.0,119.4,facility register point; area from register or default (assumed),,,False,1.931
+G42,Facility G42 (chemical),11270398735,chemical,6.26,84.6,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,1.209
+G43,Facility G43 (chemical),3104397381,chemical,10.0,119.4,facility register point; area from register or default (assumed),,,False,1.931
+G44,Facility G44 (chemical),5404034880,chemical,72.46,404.7,facility register point; area of enclosing OSM polygon (chemical_storage),,,True,13.991
+G45,Facility G45 (chemical),44305035,chemical,70.7,238.5,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,13.651
+G46,Facility G46 (chemical),5514837556,chemical,20.91,203.3,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,4.037
+G47,Facility G47 (chemical),443897655,chemical,24.27,49.9,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,4.686
+G48,Facility G48 (chemical),1490139028,chemical,10.0,409.9,facility register point; area from register or default (assumed),,,True,1.931
+G49,Facility G49 (chemical),44198896,chemical,2.85,185.1,facility register point; area of enclosing OSM polygon (other_industrial),,,False,0.55
+G50,Facility G50 (chemical),44221138,chemical,10.0,506.3,facility register point; area from register or default (assumed),,,True,1.931
+G51,Facility G51 (chemical),44252900,chemical,13.24,191.1,facility register point; area of enclosing OSM polygon (chemical_storage),,,False,2.557
+G52,Facility G52 (chemical),44252900,chemical,10.0,191.1,facility register point; area from register or default (assumed),,,False,1.931
+G53,Facility G53 (chemical),44634784,chemical,10.0,238.0,facility register point; area from register or default (assumed),,,False,1.931
+G54,Facility G54 (chemical),44233169,chemical,10.0,46.1,facility register point; area from register or default (assumed),,,False,1.931
+G55,Facility G55 (chemical),6334244517,chemical,10.0,318.4,facility register point; area from register or default (assumed),,,True,1.931
+G56,Facility G56 (chemical),44151140,chemical,2.44,331.2,facility register point; area of enclosing OSM polygon (other_industrial),,,True,0.471
+G57,Facility G57 (chemical),1598376638,chemical,10.0,693.8,facility register point; area from register or default (assumed),,,True,1.931
+G58,Facility G58 (refinery),44194481,refinery,10.0,416.8,facility register point; area from register or default (assumed),,404.0,True,94.155
+G59,Facility G59 (refinery),44521916,refinery,258.07,543.3,facility register point; area of enclosing OSM polygon (chemical_storage),,400.0,True,93.223
+G60,Facility G60 (refinery),44465525,refinery,136.44,587.2,facility register point; area of enclosing OSM polygon (chemical_storage),,75.0,True,17.479
+G61,Facility G61 (refinery),44347468,refinery,10.0,364.4,facility register point; area from register or default (assumed),,140.0,True,32.628
+G62,Facility G62 (chemical),9891594005,chemical,10.0,31.4,facility register point; area from register or default (assumed),,,False,1.931
+G63,Facility G63 (chemical),1295296259,chemical,16.84,233.0,"OSM polygon (chemical_storage, tanks=3); area",,,False,3.252
+G64,Facility G64 (chemical),443889632,chemical,8.44,201.2,"OSM polygon (chemical_storage, tanks=4); area",,,False,1.63
+G65,Facility G65 (chemical),44200449,chemical,9.62,464.3,"OSM polygon (chemical_storage, tanks=5); area",,,True,1.858
+G66,Facility G66 (chemical),44218014,chemical,6.27,348.6,"OSM polygon (chemical_storage, tanks=37); area",,,True,1.211
+G67,Facility G67 (chemical),8731243487,chemical,7.23,363.2,"OSM polygon (chemical_storage, tanks=3); area",,,True,1.396
+G68,Facility G68 (chemical),44221138,chemical,46.8,315.1,"OSM polygon (chemical_storage, tanks=201); area",,,True,9.037
+G69,Facility G69 (chemical),44200449,chemical,64.24,434.3,"OSM polygon (chemical_storage, tanks=274); area",,,True,12.404
+G70,Facility G70 (chemical),44571771,chemical,16.74,374.6,"OSM polygon (chemical_storage, tanks=25); area",,,True,3.232
+G71,Facility G71 (chemical),44552605,chemical,92.53,481.8,"OSM polygon (chemical_storage, tanks=44); area",,,True,17.867
+G72,Facility G72 (chemical),6698794809,chemical,22.62,264.1,"OSM polygon (chemical_storage, tanks=37); area",,,False,4.368
+G73,Facility G73 (chemical),5514837556,chemical,22.01,407.6,"OSM polygon (chemical_storage, tanks=4); area",,,True,4.25
+G74,Facility G74 (chemical),44634784,chemical,24.26,655.4,"OSM polygon (chemical_storage, tanks=32); area",,,True,4.684
+G75,Facility G75 (chemical),44634784,chemical,17.32,298.9,"OSM polygon (chemical_storage, tanks=78); area",,,False,3.344
+G76,Facility G76 (chemical),6625425709,chemical,6.95,236.9,"OSM polygon (chemical_storage, tanks=3); area",,,False,1.342
+G77,Facility G77 (chemical),44292240,chemical,21.57,263.1,"OSM polygon (chemical_storage, tanks=13); area",,,False,4.165
+G78,Facility G78 (chemical),4538549411,chemical,13.56,341.0,"OSM polygon (chemical_storage, tanks=15); area",,,True,2.618
+G79,Facility G79 (chemical),4538549411,chemical,29.81,548.1,"OSM polygon (chemical_storage, tanks=5); area",,,True,5.756
+G80,Facility G80 (chemical),6548252254,chemical,6.67,251.0,"OSM polygon (chemical_storage, tanks=9); area",,,False,1.288
+G81,Facility G81 (chemical),44252900,chemical,5.01,538.0,"OSM polygon (chemical_storage, tanks=55); area",,,True,0.967
+G82,Facility G82 (chemical),44263632,chemical,8.22,193.3,"OSM polygon (chemical_storage, tanks=13); area",,,False,1.587
+G83,Facility G83 (chemical),44263632,chemical,5.88,352.6,"OSM polygon (chemical_storage, tanks=8); area",,,True,1.135
+G84,Facility G84 (chemical),6559310808,chemical,32.84,322.5,"OSM polygon (chemical_storage, tanks=8); area",,,True,6.341
+G85,Facility G85 (chemical),44523509,chemical,11.75,260.4,"OSM polygon (chemical_storage, tanks=3); area",,,False,2.269
+G86,Facility G86 (chemical),3183064085,chemical,9.78,198.0,"OSM polygon (chemical_storage, tanks=9); area",,,False,1.888
+G87,Facility G87 (chemical),4549936892,chemical,13.69,169.5,"OSM polygon (chemical_storage, tanks=313); area",,,False,2.643
+G88,Facility G88 (chemical),5404034880,chemical,45.56,424.6,"OSM polygon (chemical_storage, tanks=11); area",,,True,8.797

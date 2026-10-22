@@ -1,0 +1,286 @@
+id,name,node,type,snap_dist_m,weight,weight_src,needs_manual_check
+A01,Attractor A01 (fuel station),44369020,fuel_station,25.0,1.0,count (assumed),False
+A02,Attractor A02 (fuel station),4968964601,fuel_station,52.3,1.0,count (assumed),False
+A03,Attractor A03 (fuel station),44559601,fuel_station,98.3,1.0,count (assumed),False
+A04,Attractor A04 (fuel station),10780391339,fuel_station,91.3,1.0,count (assumed),False
+A05,Attractor A05 (fuel station),44738225,fuel_station,140.1,1.0,count (assumed),False
+A06,Attractor A06 (fuel station),614678507,fuel_station,51.4,1.0,count (assumed),False
+A07,Attractor A07 (fuel station),44399517,fuel_station,42.4,1.0,count (assumed),False
+A08,Attractor A08 (fuel station),44781053,fuel_station,28.7,1.0,count (assumed),False
+A09,Attractor A09 (fuel station),610402544,fuel_station,55.0,1.0,count (assumed),False
+A10,Attractor A10 (fuel station),44470750,fuel_station,53.7,1.0,count (assumed),False
+A11,Attractor A11 (fuel station),10780391339,fuel_station,94.8,1.0,count (assumed),False
+A12,Attractor A12 (fuel station),1436972623,fuel_station,23.8,1.0,count (assumed),False
+A13,Attractor A13 (fuel station),44564447,fuel_station,45.0,1.0,count (assumed),False
+A14,Attractor A14 (fuel station),1726841464,fuel_station,25.6,1.0,count (assumed),False
+A15,Attractor A15 (fuel station),1364866864,fuel_station,24.8,1.0,count (assumed),False
+A16,Attractor A16 (fuel station),1116995769,fuel_station,19.9,1.0,count (assumed),False
+A17,Attractor A17 (fuel station),536717648,fuel_station,46.2,1.0,count (assumed),False
+A18,Attractor A18 (fuel station),1699295426,fuel_station,25.5,1.0,count (assumed),False
+A19,Attractor A19 (fuel station),44742134,fuel_station,15.6,1.0,count (assumed),False
+A20,Attractor A20 (fuel station),44514219,fuel_station,15.2,1.0,count (assumed),False
+A21,Attractor A21 (fuel station),4506764647,fuel_station,16.2,1.0,count (assumed),False
+A22,Attractor A22 (fuel station),4618337655,fuel_station,28.4,1.0,count (assumed),False
+A23,Attractor A23 (fuel station),44731617,fuel_station,48.3,1.0,count (assumed),False
+A24,Attractor A24 (fuel station),44774832,fuel_station,78.7,1.0,count (assumed),False
+A25,Attractor A25 (fuel station),44203626,fuel_station,68.2,1.0,count (assumed),False
+A26,Attractor A26 (fuel station),1646260143,fuel_station,53.3,1.0,count (assumed),False
+A27,Attractor A27 (fuel station),44588353,fuel_station,32.2,1.0,count (assumed),False
+A28,Attractor A28 (fuel station),44420432,fuel_station,62.3,1.0,count (assumed),False
+A29,Attractor A29 (fuel station),44311791,fuel_station,26.0,1.0,count (assumed),False
+A30,Attractor A30 (fuel station),9445381360,fuel_station,36.1,1.0,count (assumed),False
+A31,Attractor A31 (fuel station),44481433,fuel_station,53.7,1.0,count (assumed),False
+A32,Attractor A32 (fuel station),44476433,fuel_station,36.3,1.0,count (assumed),False
+A33,Attractor A33 (fuel station),1019257079,fuel_station,98.7,1.0,count (assumed),False
+A34,Attractor A34 (fuel station),44447229,fuel_station,33.9,1.0,count (assumed),False
+A35,Attractor A35 (fuel station),1068060501,fuel_station,116.0,1.0,count (assumed),False
+A36,Attractor A36 (fuel station),2737109340,fuel_station,26.8,1.0,count (assumed),False
+A37,Attractor A37 (fuel station),12663037383,fuel_station,34.7,1.0,count (assumed),False
+A38,Attractor A38 (fuel station),44786396,fuel_station,58.1,1.0,count (assumed),False
+A39,Attractor A39 (fuel station),11775717906,fuel_station,30.9,1.0,count (assumed),False
+A40,Attractor A40 (fuel station),44142299,fuel_station,64.2,1.0,count (assumed),False
+A41,Attractor A41 (fuel station),44143895,fuel_station,17.7,1.0,count (assumed),False
+A42,Attractor A42 (fuel station),2369251754,fuel_station,32.1,1.0,count (assumed),False
+A43,Attractor A43 (fuel station),3359363227,fuel_station,28.4,1.0,count (assumed),False
+A44,Attractor A44 (fuel station),3359363227,fuel_station,78.7,1.0,count (assumed),False
+A45,Attractor A45 (fuel station),4237653398,fuel_station,52.6,1.0,count (assumed),False
+A46,Attractor A46 (fuel station),745710904,fuel_station,210.6,1.0,count (assumed),False
+A47,Attractor A47 (fuel station),44581751,fuel_station,65.3,1.0,count (assumed),False
+A48,Attractor A48 (fuel station),44536022,fuel_station,28.0,1.0,count (assumed),False
+A49,Attractor A49 (fuel station),759737929,fuel_station,25.7,1.0,count (assumed),False
+A50,Attractor A50 (fuel station),1854792583,fuel_station,23.6,1.0,count (assumed),False
+A51,Attractor A51 (fuel station),44613006,fuel_station,44.8,1.0,count (assumed),False
+A52,Attractor A52 (fuel station),4437582215,fuel_station,31.9,1.0,count (assumed),False
+A53,Attractor A53 (fuel station),4401363437,fuel_station,27.5,1.0,count (assumed),False
+A54,Attractor A54 (fuel station),11815172182,fuel_station,25.8,1.0,count (assumed),False
+A55,Attractor A55 (fuel station),1307168338,fuel_station,33.5,1.0,count (assumed),False
+A56,Attractor A56 (fuel station),1297615664,fuel_station,38.4,1.0,count (assumed),False
+A57,Attractor A57 (fuel station),1386620840,fuel_station,27.8,1.0,count (assumed),False
+A58,Attractor A58 (fuel station),2795048294,fuel_station,25.2,1.0,count (assumed),False
+A59,Attractor A59 (fuel station),44789942,fuel_station,33.3,1.0,count (assumed),False
+A60,Attractor A60 (fuel station),44549384,fuel_station,54.9,1.0,count (assumed),False
+A61,Attractor A61 (fuel station),1950361801,fuel_station,89.7,1.0,count (assumed),False
+A62,Attractor A62 (fuel station),2387962470,fuel_station,132.7,1.0,count (assumed),False
+A63,Attractor A63 (fuel station),10946012459,fuel_station,55.6,1.0,count (assumed),False
+A64,Attractor A64 (fuel station),3328040442,fuel_station,9.8,1.0,count (assumed),False
+A65,Attractor A65 (fuel station),44045950,fuel_station,26.6,1.0,count (assumed),False
+A66,Attractor A66 (fuel station),44046363,fuel_station,29.7,1.0,count (assumed),False
+A67,Attractor A67 (fuel station),1568986533,fuel_station,63.8,1.0,count (assumed),False
+A68,Attractor A68 (fuel station),1499639849,fuel_station,71.1,1.0,count (assumed),False
+A69,Attractor A69 (fuel station),44426173,fuel_station,45.4,1.0,count (assumed),False
+A70,Attractor A70 (fuel station),43970754,fuel_station,26.7,1.0,count (assumed),False
+A71,Attractor A71 (fuel station),1393024898,fuel_station,97.0,1.0,count (assumed),False
+A72,Attractor A72 (fuel station),1435580947,fuel_station,70.0,1.0,count (assumed),False
+A73,Attractor A73 (fuel station),1433962853,fuel_station,82.1,1.0,count (assumed),False
+A74,Attractor A74 (fuel station),44311768,fuel_station,59.6,1.0,count (assumed),False
+A75,Attractor A75 (fuel station),44330082,fuel_station,53.7,1.0,count (assumed),False
+A76,Attractor A76 (fuel station),44104483,fuel_station,65.6,1.0,count (assumed),False
+A77,Attractor A77 (fuel station),1793634034,fuel_station,44.0,1.0,count (assumed),False
+A78,Attractor A78 (fuel station),44158724,fuel_station,19.1,1.0,count (assumed),False
+A79,Attractor A79 (fuel station),1448670636,fuel_station,40.2,1.0,count (assumed),False
+A80,Attractor A80 (fuel station),44447290,fuel_station,44.5,1.0,count (assumed),False
+A81,Attractor A81 (fuel station),1705765812,fuel_station,14.4,1.0,count (assumed),False
+A82,Attractor A82 (fuel station),44283871,fuel_station,55.4,1.0,count (assumed),False
+A83,Attractor A83 (fuel station),915413524,fuel_station,37.7,1.0,count (assumed),False
+A84,Attractor A84 (fuel station),44023547,fuel_station,42.7,1.0,count (assumed),False
+A85,Attractor A85 (fuel station),44441658,fuel_station,41.8,1.0,count (assumed),False
+A86,Attractor A86 (fuel station),44046745,fuel_station,15.4,1.0,count (assumed),False
+A87,Attractor A87 (fuel station),1584165428,fuel_station,25.7,1.0,count (assumed),False
+A88,Attractor A88 (fuel station),44360303,fuel_station,61.1,1.0,count (assumed),False
+A89,Attractor A89 (fuel station),44180283,fuel_station,42.6,1.0,count (assumed),False
+A90,Attractor A90 (fuel station),2424330327,fuel_station,150.6,1.0,count (assumed),False
+A91,Attractor A91 (fuel station),3690455241,fuel_station,156.1,1.0,count (assumed),False
+A92,Attractor A92 (fuel station),44165606,fuel_station,94.6,1.0,count (assumed),False
+A93,Attractor A93 (fuel station),44399176,fuel_station,57.1,1.0,count (assumed),False
+A94,Attractor A94 (fuel station),2397126157,fuel_station,34.7,1.0,count (assumed),False
+A95,Attractor A95 (fuel station),43968096,fuel_station,23.3,1.0,count (assumed),False
+A96,Attractor A96 (fuel station),44129389,fuel_station,92.4,1.0,count (assumed),False
+A97,Attractor A97 (fuel station),2770991530,fuel_station,106.2,1.0,count (assumed),False
+A98,Attractor A98 (fuel station),3138331040,fuel_station,42.8,1.0,count (assumed),False
+A99,Attractor A99 (fuel station),1402598708,fuel_station,259.8,1.0,count (assumed),False
+A100,Attractor A100 (fuel station),1515821435,fuel_station,21.7,1.0,count (assumed),False
+A101,Attractor A101 (fuel station),1402598708,fuel_station,201.5,1.0,count (assumed),False
+A102,Attractor A102 (fuel station),44280812,fuel_station,44.5,1.0,count (assumed),False
+A103,Attractor A103 (fuel station),1074637174,fuel_station,112.4,1.0,count (assumed),False
+A104,Attractor A104 (fuel station),8755161382,fuel_station,130.7,1.0,count (assumed),False
+A105,Attractor A105 (fuel station),1563503312,fuel_station,36.8,1.0,count (assumed),False
+A106,Attractor A106 (fuel station),2547701439,fuel_station,35.4,1.0,count (assumed),False
+A107,Attractor A107 (fuel station),9452386837,fuel_station,41.5,1.0,count (assumed),False
+A108,Attractor A108 (fuel station),11074103007,fuel_station,34.6,1.0,count (assumed),False
+A109,Attractor A109 (fuel station),44758014,fuel_station,24.9,1.0,count (assumed),False
+A110,Attractor A110 (fuel station),44095721,fuel_station,30.1,1.0,count (assumed),False
+A111,Attractor A111 (fuel station),2093429911,fuel_station,55.3,1.0,count (assumed),False
+A112,Attractor A112 (fuel station),9804152908,fuel_station,126.7,1.0,count (assumed),False
+A113,Attractor A113 (fuel station),44375286,fuel_station,253.0,1.0,count (assumed),False
+A114,Attractor A114 (fuel station),1231315241,fuel_station,37.2,1.0,count (assumed),False
+A115,Attractor A115 (fuel station),44385578,fuel_station,95.9,1.0,count (assumed),False
+A116,Attractor A116 (fuel station),3670433108,fuel_station,29.5,1.0,count (assumed),False
+A117,Attractor A117 (fuel station),44383729,fuel_station,20.5,1.0,count (assumed),False
+A118,Attractor A118 (fuel station),44157420,fuel_station,55.0,1.0,count (assumed),False
+A119,Attractor A119 (fuel station),1367173739,fuel_station,95.0,1.0,count (assumed),False
+A120,Attractor A120 (fuel station),1441043892,fuel_station,193.0,1.0,count (assumed),False
+A121,Attractor A121 (fuel station),44415892,fuel_station,26.3,1.0,count (assumed),False
+A122,Attractor A122 (fuel station),44366411,fuel_station,102.6,1.0,count (assumed),False
+A123,Attractor A123 (fuel station),44373599,fuel_station,68.8,1.0,count (assumed),False
+A124,Attractor A124 (fuel station),44426215,fuel_station,68.1,1.0,count (assumed),False
+A125,Attractor A125 (fuel station),44486368,fuel_station,89.2,1.0,count (assumed),False
+A126,Attractor A126 (fuel station),44425332,fuel_station,172.8,1.0,count (assumed),False
+A127,Attractor A127 (fuel station),44435712,fuel_station,207.9,1.0,count (assumed),False
+A128,Attractor A128 (fuel station),735555481,fuel_station,92.2,1.0,count (assumed),False
+A129,Attractor A129 (fuel station),44177605,fuel_station,39.0,1.0,count (assumed),False
+A130,Attractor A130 (fuel station),44504954,fuel_station,79.7,1.0,count (assumed),False
+A131,Attractor A131 (fuel station),44228008,fuel_station,40.7,1.0,count (assumed),False
+A132,Attractor A132 (fuel station),44280793,fuel_station,80.1,1.0,count (assumed),False
+A133,Attractor A133 (fuel station),1685106673,fuel_station,74.4,1.0,count (assumed),False
+A134,Attractor A134 (fuel station),1038755915,fuel_station,96.9,1.0,count (assumed),False
+A135,Attractor A135 (fuel station),9804152907,fuel_station,194.5,1.0,count (assumed),False
+A136,Attractor A136 (fuel station),44440698,fuel_station,24.0,1.0,count (assumed),False
+A137,Attractor A137 (fuel station),759738412,fuel_station,46.1,1.0,count (assumed),False
+A138,Attractor A138 (fuel station),8184532863,fuel_station,16.0,1.0,count (assumed),False
+A139,Attractor A139 (fuel station),44349482,fuel_station,67.7,1.0,count (assumed),False
+A140,Attractor A140 (fuel station),44371004,fuel_station,29.3,1.0,count (assumed),False
+A141,Attractor A141 (fuel station),745605653,fuel_station,16.8,1.0,count (assumed),False
+A142,Attractor A142 (fuel station),2406060025,fuel_station,27.2,1.0,count (assumed),False
+A143,Attractor A143 (fuel station),1563503200,fuel_station,35.8,1.0,count (assumed),False
+A144,Attractor A144 (fuel station),11632541341,fuel_station,17.7,1.0,count (assumed),False
+A145,Attractor A145 (fuel station),44144254,fuel_station,87.9,1.0,count (assumed),False
+A146,Attractor A146 (fuel station),558861110,fuel_station,44.5,1.0,count (assumed),False
+A147,Attractor A147 (fuel station),6720516801,fuel_station,20.1,1.0,count (assumed),False
+A148,Attractor A148 (fuel station),44305902,fuel_station,48.2,1.0,count (assumed),False
+A149,Attractor A149 (fuel station),4831670662,fuel_station,66.3,1.0,count (assumed),False
+A150,Attractor A150 (fuel station),837634111,fuel_station,49.4,1.0,count (assumed),False
+A151,Attractor A151 (fuel station),44351256,fuel_station,46.7,1.0,count (assumed),False
+A152,Attractor A152 (fuel station),44743738,fuel_station,274.6,1.0,count (assumed),False
+A153,Attractor A153 (fuel station),4835265211,fuel_station,72.7,1.0,count (assumed),False
+A154,Attractor A154 (fuel station),1402734794,fuel_station,144.8,1.0,count (assumed),False
+A155,Attractor A155 (fuel station),44542232,fuel_station,24.9,1.0,count (assumed),False
+A156,Attractor A156 (fuel station),1295304583,fuel_station,45.7,1.0,count (assumed),False
+A157,Attractor A157 (fuel station),44052885,fuel_station,148.9,1.0,count (assumed),False
+A158,Attractor A158 (fuel station),44731584,fuel_station,56.9,1.0,count (assumed),False
+A159,Attractor A159 (fuel station),44114802,fuel_station,32.7,1.0,count (assumed),False
+A160,Attractor A160 (fuel station),2948424077,fuel_station,207.9,1.0,count (assumed),False
+A161,Attractor A161 (fuel station),43957072,fuel_station,31.6,1.0,count (assumed),False
+A162,Attractor A162 (fuel station),44119973,fuel_station,120.1,1.0,count (assumed),False
+A163,Attractor A163 (fuel station),44119973,fuel_station,115.8,1.0,count (assumed),False
+A164,Attractor A164 (fuel station),44327560,fuel_station,13.6,1.0,count (assumed),False
+A165,Attractor A165 (fuel station),44065984,fuel_station,59.2,1.0,count (assumed),False
+A166,Attractor A166 (fuel station),44004410,fuel_station,74.9,1.0,count (assumed),False
+A167,Attractor A167 (fuel station),44342250,fuel_station,48.4,1.0,count (assumed),False
+A168,Attractor A168 (fuel station),44136927,fuel_station,137.6,1.0,count (assumed),False
+A169,Attractor A169 (fuel station),43918413,fuel_station,92.7,1.0,count (assumed),False
+A170,Attractor A170 (fuel station),44120879,fuel_station,116.1,1.0,count (assumed),False
+A171,Attractor A171 (fuel station),2793501887,fuel_station,17.1,1.0,count (assumed),False
+A172,Attractor A172 (fuel station),44553570,fuel_station,30.9,1.0,count (assumed),False
+A173,Attractor A173 (fuel station),13445121617,fuel_station,93.8,1.0,count (assumed),False
+A174,Attractor A174 (fuel station),4685923197,fuel_station,181.9,1.0,count (assumed),False
+A175,Attractor A175 (fuel station),44550389,fuel_station,34.7,1.0,count (assumed),False
+A176,Attractor A176 (fuel station),602279343,fuel_station,52.8,1.0,count (assumed),False
+A177,Attractor A177 (fuel station),2754621932,fuel_station,59.9,1.0,count (assumed),False
+A178,Attractor A178 (fuel station),9514267835,fuel_station,31.6,1.0,count (assumed),False
+A179,Attractor A179 (fuel station),44250761,fuel_station,248.8,1.0,count (assumed),False
+A180,Attractor A180 (fuel station),5508146084,fuel_station,39.9,1.0,count (assumed),False
+A181,Attractor A181 (fuel station),44375286,fuel_station,210.6,1.0,count (assumed),False
+A182,Attractor A182 (fuel station),44645785,fuel_station,301.8,1.0,count (assumed),True
+A183,Attractor A183 (fuel station),2768540281,fuel_station,33.0,1.0,count (assumed),False
+A184,Attractor A184 (fuel station),44452171,fuel_station,74.5,1.0,count (assumed),False
+A185,Attractor A185 (fuel station),43980849,fuel_station,50.2,1.0,count (assumed),False
+A186,Attractor A186 (fuel station),44520560,fuel_station,23.8,1.0,count (assumed),False
+A187,Attractor A187 (fuel station),4930495452,fuel_station,36.6,1.0,count (assumed),False
+A188,Attractor A188 (fuel station),1659751873,fuel_station,30.1,1.0,count (assumed),False
+A189,Attractor A189 (fuel station),44352304,fuel_station,23.2,1.0,count (assumed),False
+A190,Attractor A190 (fuel station),44093031,fuel_station,56.3,1.0,count (assumed),False
+A191,Attractor A191 (fuel station),44216090,fuel_station,42.6,1.0,count (assumed),False
+A192,Attractor A192 (fuel station),1029946301,fuel_station,49.3,1.0,count (assumed),False
+A193,Attractor A193 (fuel station),2278804550,fuel_station,32.3,1.0,count (assumed),False
+A194,Attractor A194 (fuel station),735631703,fuel_station,88.7,1.0,count (assumed),False
+A195,Attractor A195 (fuel station),11423225227,fuel_station,88.0,1.0,count (assumed),False
+A196,Attractor A196 (fuel station),44158210,fuel_station,116.2,1.0,count (assumed),False
+A197,Attractor A197 (fuel station),2406060025,fuel_station,17.9,1.0,count (assumed),False
+A198,Attractor A198 (fuel station),43946314,fuel_station,54.8,1.0,count (assumed),False
+A199,Attractor A199 (fuel station),11383754428,fuel_station,63.9,1.0,count (assumed),False
+A200,Attractor A200 (fuel station),11383754428,fuel_station,63.7,1.0,count (assumed),False
+A201,Attractor A201 (fuel station),3801233669,fuel_station,46.7,1.0,count (assumed),False
+A202,Attractor A202 (fuel station),1883246318,fuel_station,47.4,1.0,count (assumed),False
+A203,Attractor A203 (fuel station),44693011,fuel_station,128.3,1.0,count (assumed),False
+A204,Attractor A204 (fuel station),44240622,fuel_station,18.4,1.0,count (assumed),False
+A205,Attractor A205 (fuel station),1658944589,fuel_station,38.4,1.0,count (assumed),False
+A206,Attractor A206 (fuel station),44443914,fuel_station,40.9,1.0,count (assumed),False
+A207,Attractor A207 (fuel station),44345024,fuel_station,36.2,1.0,count (assumed),False
+A208,Attractor A208 (fuel station),44286341,fuel_station,36.1,1.0,count (assumed),False
+A209,Attractor A209 (fuel station),1080690509,fuel_station,34.2,1.0,count (assumed),False
+A210,Attractor A210 (fuel station),44129978,fuel_station,65.2,1.0,count (assumed),False
+A211,Attractor A211 (fuel station),12282716462,fuel_station,34.9,1.0,count (assumed),False
+A212,Attractor A212 (fuel station),853535659,fuel_station,41.8,1.0,count (assumed),False
+A213,Attractor A213 (fuel station),11571220993,fuel_station,103.7,1.0,count (assumed),False
+A214,Attractor A214 (fuel station),1062455429,fuel_station,60.8,1.0,count (assumed),False
+A215,Attractor A215 (fuel station),44187150,fuel_station,29.7,1.0,count (assumed),False
+A216,Attractor A216 (fuel station),4259435615,fuel_station,8.2,1.0,count (assumed),False
+A217,Attractor A217 (fuel station),1585674023,fuel_station,118.0,1.0,count (assumed),False
+A218,Attractor A218 (fuel station),44347986,fuel_station,114.6,1.0,count (assumed),False
+A219,Attractor A219 (fuel station),43919712,fuel_station,28.8,1.0,count (assumed),False
+A220,Attractor A220 (fuel station),11383754428,fuel_station,256.3,1.0,count (assumed),False
+A221,"Attractor A221 (chemical firm, site of G19)",409151876,chemical_firm,397.0,25.05,area (assumed),True
+A222,"Attractor A222 (chemical firm, site of G20)",44440603,chemical_firm,251.8,30.52,area (assumed),False
+A223,"Attractor A223 (chemical firm, site of G21)",1295296225,chemical_firm,264.6,10.95,area (assumed),False
+A224,"Attractor A224 (chemical firm, site of G22)",6007643831,chemical_firm,136.1,46.84,area (assumed),False
+A225,"Attractor A225 (chemical firm, site of G23)",304145117,chemical_firm,770.3,382.46,area (assumed),True
+A226,"Attractor A226 (chemical firm, site of G24)",6625425709,chemical_firm,555.0,22.08,area (assumed),True
+A227,"Attractor A227 (chemical firm, site of G25)",7055889770,chemical_firm,99.5,9.55,area (assumed),False
+A228,"Attractor A228 (chemical firm, site of G27)",1497276008,chemical_firm,514.2,10.0,area (assumed),True
+A229,"Attractor A229 (chemical firm, site of G28)",13769476917,chemical_firm,124.4,9.26,area (assumed),False
+A230,"Attractor A230 (chemical firm, site of G29)",44308461,chemical_firm,232.0,13.99,area (assumed),False
+A231,"Attractor A231 (chemical firm, site of G30)",2240055440,chemical_firm,30.5,13.3,area (assumed),False
+A232,"Attractor A232 (chemical firm, site of G31)",1497360504,chemical_firm,205.2,13.59,area (assumed),False
+A233,"Attractor A233 (chemical firm, site of G32)",44264652,chemical_firm,127.2,14.07,area (assumed),False
+A234,"Attractor A234 (chemical firm, site of G33)",44236816,chemical_firm,69.7,13.99,area (assumed),False
+A235,"Attractor A235 (chemical firm, site of G34)",12390205545,chemical_firm,95.5,10.0,area (assumed),False
+A236,"Attractor A236 (chemical firm, site of G35)",4538549212,chemical_firm,132.1,10.0,area (assumed),False
+A237,"Attractor A237 (chemical firm, site of G36)",9421380507,chemical_firm,358.0,13.51,area (assumed),True
+A238,"Attractor A238 (chemical firm, site of G37)",44234229,chemical_firm,35.0,41.63,area (assumed),False
+A239,"Attractor A239 (chemical firm, site of G38)",44218014,chemical_firm,125.5,10.0,area (assumed),False
+A240,"Attractor A240 (chemical firm, site of G39)",9350424808,chemical_firm,452.2,41.24,area (assumed),True
+A241,"Attractor A241 (chemical firm, site of G40)",409151876,chemical_firm,95.2,10.0,area (assumed),False
+A242,"Attractor A242 (chemical firm, site of G41)",3104397381,chemical_firm,119.4,10.0,area (assumed),False
+A243,"Attractor A243 (chemical firm, site of G42)",11270398735,chemical_firm,84.6,6.26,area (assumed),False
+A244,"Attractor A244 (chemical firm, site of G43)",3104397381,chemical_firm,119.4,10.0,area (assumed),False
+A245,"Attractor A245 (chemical firm, site of G44)",5404034880,chemical_firm,404.7,72.46,area (assumed),True
+A246,"Attractor A246 (chemical firm, site of G45)",44305035,chemical_firm,238.5,70.7,area (assumed),False
+A247,"Attractor A247 (chemical firm, site of G46)",5514837556,chemical_firm,203.3,20.91,area (assumed),False
+A248,"Attractor A248 (chemical firm, site of G47)",443897655,chemical_firm,49.9,24.27,area (assumed),False
+A249,"Attractor A249 (chemical firm, site of G48)",1490139028,chemical_firm,409.9,10.0,area (assumed),True
+A250,"Attractor A250 (chemical firm, site of G49)",44198896,chemical_firm,185.1,2.85,area (assumed),False
+A251,"Attractor A251 (chemical firm, site of G50)",44221138,chemical_firm,506.3,10.0,area (assumed),True
+A252,"Attractor A252 (chemical firm, site of G51)",44252900,chemical_firm,191.1,13.24,area (assumed),False
+A253,"Attractor A253 (chemical firm, site of G52)",44252900,chemical_firm,191.1,10.0,area (assumed),False
+A254,"Attractor A254 (chemical firm, site of G53)",44634784,chemical_firm,238.0,10.0,area (assumed),False
+A255,"Attractor A255 (chemical firm, site of G54)",44233169,chemical_firm,46.1,10.0,area (assumed),False
+A256,"Attractor A256 (chemical firm, site of G55)",6334244517,chemical_firm,318.4,10.0,area (assumed),True
+A257,"Attractor A257 (chemical firm, site of G56)",44151140,chemical_firm,331.2,2.44,area (assumed),True
+A258,"Attractor A258 (chemical firm, site of G57)",1598376638,chemical_firm,693.8,10.0,area (assumed),True
+A259,"Attractor A259 (chemical firm, site of G62)",9891594005,chemical_firm,31.4,10.0,area (assumed),False
+A260,"Attractor A260 (chemical firm, site of G63)",1295296259,chemical_firm,233.0,16.84,area (assumed),False
+A261,"Attractor A261 (chemical firm, site of G64)",443889632,chemical_firm,201.2,8.44,area (assumed),False
+A262,"Attractor A262 (chemical firm, site of G65)",44200449,chemical_firm,464.3,9.62,area (assumed),True
+A263,"Attractor A263 (chemical firm, site of G66)",44218014,chemical_firm,348.6,6.27,area (assumed),True
+A264,"Attractor A264 (chemical firm, site of G67)",8731243487,chemical_firm,363.2,7.23,area (assumed),True
+A265,"Attractor A265 (chemical firm, site of G68)",44221138,chemical_firm,315.1,46.8,area (assumed),True
+A266,"Attractor A266 (chemical firm, site of G69)",44200449,chemical_firm,434.3,64.24,area (assumed),True
+A267,"Attractor A267 (chemical firm, site of G70)",44571771,chemical_firm,374.6,16.74,area (assumed),True
+A268,"Attractor A268 (chemical firm, site of G71)",44552605,chemical_firm,481.8,92.53,area (assumed),True
+A269,"Attractor A269 (chemical firm, site of G72)",6698794809,chemical_firm,264.1,22.62,area (assumed),False
+A270,"Attractor A270 (chemical firm, site of G73)",5514837556,chemical_firm,407.6,22.01,area (assumed),True
+A271,"Attractor A271 (chemical firm, site of G74)",44634784,chemical_firm,655.4,24.26,area (assumed),True
+A272,"Attractor A272 (chemical firm, site of G75)",44634784,chemical_firm,298.9,17.32,area (assumed),False
+A273,"Attractor A273 (chemical firm, site of G76)",6625425709,chemical_firm,236.9,6.95,area (assumed),False
+A274,"Attractor A274 (chemical firm, site of G77)",44292240,chemical_firm,263.1,21.57,area (assumed),False
+A275,"Attractor A275 (chemical firm, site of G78)",4538549411,chemical_firm,341.0,13.56,area (assumed),True
+A276,"Attractor A276 (chemical firm, site of G79)",4538549411,chemical_firm,548.1,29.81,area (assumed),True
+A277,"Attractor A277 (chemical firm, site of G80)",6548252254,chemical_firm,251.0,6.67,area (assumed),False
+A278,"Attractor A278 (chemical firm, site of G81)",44252900,chemical_firm,538.0,5.01,area (assumed),True
+A279,"Attractor A279 (chemical firm, site of G82)",44263632,chemical_firm,193.3,8.22,area (assumed),False
+A280,"Attractor A280 (chemical firm, site of G83)",44263632,chemical_firm,352.6,5.88,area (assumed),True
+A281,"Attractor A281 (chemical firm, site of G84)",6559310808,chemical_firm,322.5,32.84,area (assumed),True
+A282,"Attractor A282 (chemical firm, site of G85)",44523509,chemical_firm,260.4,11.75,area (assumed),False
+A283,"Attractor A283 (chemical firm, site of G86)",3183064085,chemical_firm,198.0,9.78,area (assumed),False
+A284,"Attractor A284 (chemical firm, site of G87)",4549936892,chemical_firm,169.5,13.69,area (assumed),False
+A285,"Attractor A285 (chemical firm, site of G88)",5404034880,chemical_firm,424.6,45.56,area (assumed),True

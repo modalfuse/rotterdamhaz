@@ -1,0 +1,5 @@
+substance,un_number,erg_guide,isolation_m,primary_radius_km,source
+chlorine,UN1017,124,600,3.3,"ERG2024 Table 3 (p.340), highway tank truck/trailer large spill: isolate 600 m; protect downwind DAY moderate wind 3.3 km (low 5.6, high 2.5; NIGHT 6.4/4.7/3.8)"
+ammonia,UN1005,125,150,0.5,"ERG2024 Table 3 (p.340), highway tank truck/trailer large spill: isolate 150 m; protect downwind DAY moderate wind 0.5 km (low 0.8, high 0.4; NIGHT 1.8/0.7/0.6)"
+lpg,UN1075,115,100,0.8,ERG2024 Guide 115 (p.159): isolate >=100 m; large spill downwind evacuation >=800 m; tank in fire isolate/evacuate 1600 m (BLEVE)
+benzene,UN1114,130,50,0.3,ERG2024 Guide 130 (p.189): isolate >=50 m; large spill downwind evacuation >=300 m; tank in fire 800 m

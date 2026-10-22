@@ -1,0 +1,17 @@
+# Keep every data and checksum file byte-identical (SHA256SUMS must verify after clone on any OS):
+# no end-of-line conversion, no textual diff/merge for large generated data.
+*.csv        -text
+*.geojson    -text -diff linguist-generated
+*.json       -text
+*.yaml       -text
+*.txt        -text
+SHA256SUMS   -text
+*.npz        binary
+*.tif        binary
+*.tgz        binary
+# Documentation and citation metadata may be normalised to LF.
+*.md         text eol=lf
+*.py         text eol=lf
+*.cff        text eol=lf
+LICENSE      text eol=lf
+# No Git LFS. Largest file is arcs.csv (44 MB), under GitHub's 100 MB limit.

@@ -1,0 +1,264 @@
+# Region config: Rotterdam–Rijnmond. RotterdamHaz 1.0.0.
+# Model parameters are in rotterdam.params.yaml. Provenance is in rotterdam.sources.csv.
+# Paths: ${VAR:-default} env expansion; {name} refers to `paths`. Relative paths are relative to this file.
+region: rotterdam
+title: "RotterdamHaz: Rotterdam port–industrial area (Pernis, Botlek, Europoort, Maasvlakte) and the Rijnmond urban area"
+params_file: rotterdam.params.yaml
+
+crs:
+  geographic: 4326
+  projected: 28992  # Amersfoort / RD New
+  xy_cols: [x_rd, y_rd]
+
+paths:
+  root: ${RIJNMOND_ROOT:-/data/rotterdamhaz}
+  raw: "{root}/data_raw"  # downloads (parallel worker; see data_raw/README.md)
+  work: ${RIJNMOND_WORK:-/data/rotterdamhaz/work}  # derived inputs, not part of this repository
+  osm_pbf: ${RIJNMOND_PBF:-/data/rotterdamhaz/data_raw/osm/zuid-holland-261018.osm.pbf}  # Geofabrik Zuid-Holland 2026-10-18, ODbL
+  osm_dir: "{work}/osm"
+
+osm:
+  extract_bbox: [3.90, 51.775, 4.65, 52.01]  # W S E N; network bbox + ~0.03 deg margin
+
+network:
+  source: osm  # built by hazbench.osm_graph
+  nodes: "{work}/network/nodes.csv"
+  arcs: "{work}/network/arcs.csv"
+  geojson: "{work}/network/arcs.geojson"
+  speed_src_label: "default by class (truck limits: motorway 80, N-roads 80 -> 70 assumed)"
+  hazmat_status_csv: "{work}/network/hazmat_status.csv"  # written by hazbench.prep.hazmat_status (Basisnet sections + ADR tunnel categories)
+  wkd_speed_csv: "{work}/network/wkd_speed.csv"  # written by hazbench.prep.wkd_speed
+  osm_graph:
+    bbox: [3.95, 51.805, 4.60, 52.00]  # south edge 51.83 -> 51.805 so that the Heinenoordtunnel (A29, VLG cat. C, 51.830-51.835) and the
+# Heinenoord junction south of it are inside; Maasvlakte - Europoort - Botlek - Pernis - Rotterdam centre - Schiedam/Vlaardingen - Delft-Zuid; north edge 52.00 (was 51.98)
+# so that the A4 (Ketheltunnel - Delft-Zuid junction, Basisnet Z149) is strongly connected (at 51.98 it was cut without a junction)
+    classes: [motorway, motorway_link, trunk, trunk_link, primary, primary_link, secondary, secondary_link, tertiary, tertiary_link, unclassified, residential]
+    drop_access: ["no", "private"]
+    speed_kmh: {motorway: 80, trunk: 70, primary: 60, secondary: 50, tertiary: 40, unclassified: 40, residential: 30, other: 30}  # assumed (heavy-goods-vehicle limits)
+    link_factor: 0.6
+    urban_density_threshold: 1500  # persons/km^2 within 1 km
+
+population:
+  raster: "{work}/population/cbs_vk100_2023_rd.tif"  # written by hazbench.prep.cbs_grid
+  label: "CBS 100 m (2023)"
+  cbs:
+    gpkg: "{raw}/cbs/cbs_vk100_2023_vol.gpkg"
+    layer: cbs_vk100_2023
+    field: aantal_inwoners
+    suppressed_fill: 2  # CBS -99997 'geheim' (1-4 inhabitants) -> 2 persons (decision Q. Liu 2026-10-19; midpoint)
+    bbox_buffer_m: 5000
+
+radii: common/erg2024_radii.csv  # ERG 2024
+harwood_table: common/accident_rates_harwood1990.csv
+copy_files: [common/erg2024_radii.csv, common/accident_rates_harwood1990.csv]
+
+facilities:
+  osm_polygons: true  # OSM industrial/port polygons in params.petro_zone_bbox (tank terminals etc.)
+  default_area_ha: 10  # assumed, when a register point has no enclosing OSM polygon
+  attraction_bbox: [3.95, 51.805, 4.60, 52.00]  # fuel stations only inside the network bbox
+  eprtr:
+    out: "{work}/facilities/eprtr_points.csv"  # written by hazbench.prep.eprtr_points
+    gpkg: "{raw}/eprtr/ied_SiteMap.gpkg"  # EEA Industrial Reporting v16 (2026-02), CC BY 4.0
+    country: NL
+    min_year: 2020
+    type_rules:  # first match on eprtr_AnnexIActivity
+      - ["^1\\(a\\)", refinery]  # mineral oil and gas refineries
+      - ["^4\\(", chemical]  # chemical industry
+    drop_unmatched: true
+# (decision Q. Liu 2026-10-19, item 3): port generators = listed liquid-bulk / tank-storage terminals (hazbench.prep.port_terminals),
+# located by their REV site polygon (official) or, if absent from REV, the OSM polygon carrying the terminal name; weight = site area.
+# OSM land-use polygons are no longer typed 'port'.
+  points: "{work}/facilities/facility_points_v03.csv"  # terminals (port) + E-PRTR (refinery / chemical), written by hazbench.prep.port_terminals
+  prefer_point_area: true  # use area_ha of the point file (terminal polygon) instead of the enclosing OSM polygon; that polygon is still marked used
+  osm_polygon_kinds: [chemical_storage]  # remaining OSM polygons in petro_zone_bbox: only tank-storage-like ones, all typed 'chemical'
+  osm_polygon_port: false
+  osm_polygon_min_tanks: 3  # OSM tank-storage polygons need >= 3 mapped storage tanks (13 polygons / 514 ha with < 3 tanks were
+# container / dry-bulk terminals caught by the name regex 'terminal', mostly on the Maasvlakte)
+  osm_polygon_exclude_name: "^([operator]|[operator]|[operator]|[operator]|[operator])$"  # terminals excluded from the port list
+# (crude only / not built) must not re-enter as chemical OSM tank polygons ([operator] 2 polygons 70 ha, [operator] 36 ha
+# were chemical in); decision Q. Liu 2026-10-19 20:49: also [operator] (dry-bulk terminal, 171 ha; its 14 'tanks' are the
+# adjacent [operator] LNG tanks) and [operator] (logistics park, 133 ha); TEAM / Laurenshaven / [operator] exclusions confirmed
+  port_terminals:
+    list_src: "[operator] branch lists 'Tank terminals for storage' (34) and 'Liquid bulk' (48), accessed 2026-10-19 (data_raw/portlist/*.html); in-area entries only"
+    rev_gml: "{raw}/rev/pf_productionfacilitys_rev.gml"
+    bbox: [3.95, 51.83, 4.60, 52.00]
+    merge_points: "{work}/facilities/eprtr_points.csv"  # register points of terminals listed above are dropped via drop_register (name regex)
+# (decision Q. Liu 2026-10-19 17:58): refinery tonnage split by publicly reported crude-distillation capacity (kb/d) instead of
+# site area. [operator] (E-PRTR lists 4(a) first, 1(a) second) is typed refinery here; [operator] (E-PRTR 1(a), last report 2021) is not
+# one of the five Rotterdam refineries in public lists -> retyped chemical. Pages: data_raw/refineries/ (SGS page saved; others blocked
+# automated download, values read 2026-10-19).
+    refinery_capacity:
+      - {name: "^[operator]", kbd: 404, src: "SGS Inspire, Netherlands fuel overview (2024, citing Port of Rotterdam): [operator] 404,000 b/d"}
+      - {name: "^[operator]", kbd: 400, src: "[operator page] ([operator]): 400,000 vaten/dag (19 Mt/jaar); Reuters 2025-06-03: 400,000 bpd"}
+      - {name: "^[operator] Nederland BV \\(Raffinaderij", kbd: 191, src: "SGS Inspire (2024, citing Port of Rotterdam): [operator] Botlek Rotterdam 191,000 b/d"}
+      - {name: "^[operator]", kbd: 140, src: "[operator page] refining capacity 140 kbpd (SGS Inspire 2024 lists 120,000 b/d)"}
+      - {name: "^[operator]", kbd: 75, src: "[operator page] ([operator]): capacity 75,000 b/d; SGS Inspire 2024: 75,000 b/d"}
+    refinery_unlisted_type: chemical
+    out: "{work}/facilities/facility_points_v03.csv"
+    terminals:  # not located (neither in REV nor named in OSM): [operator] Terminal Europoort, [operator] Europoort
+# (decision Q. Liu 2026-10-19 19:35): port tonnage split by public tank storage capacity (m3, operator pages, accessed 2026-10-19;
+# pages saved in data_raw/terminal_capacity/ where automated download worked). Terminals whose public page shows crude-only pipeline
+# service, no road/truck access, or that are not yet built are excluded.
+      - {name: "[operator]", osm: "^[operator]$", exclude: "under development on the former [operator] site, no operational storage ([operator].com 2025: planned ca. 230,000 m3)"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 1623000, capacity_src: "[operator page] capacity 1,623,000 CBM"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 1348000, capacity_src: "[operator page] capacity 1,348,000 CBM"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 662000, capacity_src: "[operator page] capacity 662,000 CBM"}
+      - {name: "[operator]", rev: "^[operator]", capacity_m3: 92000, capacity_src: "[operator page] capacity 92,000 CBM"}
+      - {name: "[operator]", osm: "^[operator]", drop_register: "^[operator]", capacity_m3: 257000, capacity_src: "[operator page] total capacity 257,000 cbm (21 tanks)"}  # also an E-PRTR 4(a) point: counted once, as terminal
+      - {name: "[operator]", osm: "^[operator]$", capacity_m3: 720000, capacity_src: "[operator page] facts & figures: net 180,000 m3 per tank; 4th tank commissioned (portofrotterdam.com news, 2026): 4 x 180,000 m3"}
+      - {name: "[operator]", osm: "^[operator]$", capacity_m3: 468500, capacity_src: "[operator page] ~530,000 cbm incl. bitumen site, minus bitumen site 61,500 m3"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 61500, capacity_src: "Gemeenteblad 2018, 47473 (officielebekendmakingen.nl): bitumen site total storage 61,500 m3"}
+      - {name: "[operator]", osm: "^[operator]", capacity_m3: 174000, capacity_src: "[operator page] 174,000 m3 (expansion to 260,000 m3 not counted)"}
+      - {name: "[operator]", rev: "[operator]", each: true, capacity_m3: 882683, capacity_src: "[operator].com/botlek-rotterdam: total terminal storage 882,683 cbm"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 219371, capacity_src: "[operator].com/chemiehaven-rotterdam: total terminal storage 219,371 cbm"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 326036, capacity_src: "[operator].com/ttr-rotterdam: total terminal storage 326,036 cbm"}
+      - {name: "[operator]", rev: "[operator]", capacity_m3: 242154, capacity_src: "[operator page] case study [operator]: total capacity 242,154 cbm"}
+      - {name: "[operator]", rev: "^[operator]", exclude: "crude oil only, discharged from tankers and pumped by 4 pipelines ([operator page]; 33 tanks, 2,754,900 m3)"}
+      - {name: "[operator]", osm: "^[operator]", capacity_m3: 306600, capacity_src: "[operator page] storage capacity 306,600 m3 (75 tanks)"}
+      - {name: "[operator]", osm: "^[operator]$", capacity_group: "[operator]"}  # former [operator] Botlek, sold with TTR and Chemiehaven to Infracapital ([operator]) 2023-12 ([operator page]); same site as [operator] Botlek deel Noord
+      - {name: "[operator]", rev: "[operator]", exclude: "access barge, pipeline, vessel only, no road ([operator page] terminal page; 679,358 m3 gasoil)"}
+      - {name: "[operator]", osm: "^[operator]", capacity_m3: 622503, capacity_src: "[operator page] 622,503 cbm (310 tanks)"}
+      - {name: "[operator]", rev: "^[operator]", capacity_m3: 1400000, capacity_src: "[operator page] 1,400,000 m3 (42 tanks)"}
+# listed but not used as port generators: Maasvlakte Olie Terminal and Maatschap Europoort Terminal (crude / fuel oil, ship and pipeline;
+# no tank-truck loading assumed, would otherwise take 143 ha of area weight on the Maasvlakte/Europoort); also [operator] Laurenshaven, [operator] (exclude: above); [operator] (refineries, E-PRTR 1(a)); [operator] (under construction);
+# [operator] Terminal Europoort, [operator] (no public location found); companies outside the study area (Amsterdam, Moerdijk, Dordrecht,...)
+
+gateways:
+  source: points  # motorway exits of the study area (checked 2026-10-19 against OSM refs), snapped to motorway/trunk nodes;
+# weight = observed loaded DG tank trucks/year (LF+GF+GT, both directions, incl. through traffic) on the boundary Basisnet section
+  snap_classes: [motorway, trunk, motorway_link, trunk_link]
+  max_snap_m: 3000
+  points:
+    - {name: "A4 north (Delft / The Hague)", lon: 4.327, lat: 51.988, weight: 24611, weight_src: "VGS 2025 Z33 LF+GF+GT (estimated)"}  # A4 near Delft-Zuid junction (afrit 14); old point 4.355,51.968 lay 4.6 km from any motorway node
+    - {name: "A13 north (Delft / The Hague)", lon: 4.383, lat: 51.993, weight: 7147, weight_src: "VGS 2025 Z30 LF+GF+GT (estimated)"}  # A13 near afrit 10 (TU Delft)
+    - {name: "A20 east (Gouda / Utrecht)", lon: 4.556, lat: 51.954, weight: 29697, weight_src: "VGS 2025 Z51 LF+GF+GT (estimated)"}  # east-most A20 motorway node in the network (Nieuwerkerk junction lies outside the bbox)
+    - {name: "A15/A16 east (Ridderkerk: Dordrecht, Gorinchem)", lon: 4.585, lat: 51.872, weight: 95483, weight_src: "VGS 2025 Z55 LF+GF+GT (estimated)"}
+    - {name: "A29 south (Heinenoord: Zeeland, Antwerp)", lon: 4.484, lat: 51.8137, weight: 896, weight_src: "VGS 2025 Z88 LF+GF+GT (estimated)"}  # south of the Heinenoordtunnel (was 4.516, 51.849 north of it) # A29 near afrit 20 Barendrecht (old point 4.470,51.840 snapped 2.4 km away)
+# alternative: source: auto_boundary {bbox, classes, tol_m, cluster_m} picks motorway/trunk nodes near the bbox edge
+# (with this bbox the clipped motorway stubs drop out of the SCC, so nearest nodes are 1.2-2.5 km inside; Maasvlakte is not a gateway)
+
+corridor_restrict_src: "Basisnet route (Regeling basisnet, 2024)"
+
+hazmat_status:  # hazbench.prep.hazmat_status -> network.hazmat_status_csv
+  basisnet_csv: "{raw}/basisnet/basisnet_weg_bijlageI_raw.csv"
+  sections_kmz: "{raw}/vgs/2024_google_earth.zip!Wegvakken Nederland.kmz"
+  match: {classes: [motorway, trunk, primary, secondary], buffer_m: 75, min_along_frac: 0.7}
+  tunnels:  # Regeling vervoer over land van gevaarlijke stoffen (VLG) art. 3 (version 2026-03-15); not listed = no restriction (A)
+    - {name: Beneluxtunnel, cat: C, ref: A4, bbox: [4.36, 51.890, 4.385, 51.910]}
+    - {name: Ketheltunnel, cat: C, ref: A4, bbox: [4.345, 51.925, 4.370, 51.950]}
+    - {name: "Maasdeltatunnel / Hollandtunnel", cat: C, ref: A24, bbox: [4.25, 51.89, 4.31, 51.93]}
+    - {name: Thomassentunnel, cat: C, ref: A15, bbox: [4.21, 51.895, 4.245, 51.905]}
+    - {name: Botlektunnel, cat: D, ref: A15, bbox: [4.32, 51.865, 4.34, 51.875]}
+    - {name: Heinenoordtunnel, cat: C, ref: A29, bbox: [4.50, 51.82, 4.52, 51.84]}
+    - {name: Maastunnel, cat: D, osm_name: Maastunnel, bbox: [4.46, 51.89, 4.48, 51.91]}
+
+data_sources: rotterdam.sources.csv  # copied to <build>/DATA_SOURCES.csv (QA check 8)
+
+od:
+  provenance: "estimated: totals fitted to RWS VGS 2025 class-3 counts (scripts/fit_od_totals.py); gravity model beta=%.1f (power deterrence, travel-time impedance)"
+  calibration:
+    observed: "{work}/calibration/vgs_counts.csv"  # written by hazbench.prep.vgs_counts
+    site_id: site_id
+    class_columns:  # Basisnet categories (annual loaded tank trucks): LF = flammable liquids, GF = flammable gases, GT = toxic gases
+      class3: [LF1, LF2]
+      class2: [GF1, GF2, GF3, GT3, GT4, GT5]
+    match_classes: [motorway, trunk, primary]
+    max_dist_m: 250
+    both_directions: true
+    cross_section: true  # A15 has main + parallel carriageways: count all carriageways crossing the section
+    iterations: 30
+    damping: 0.5
+    factor_bounds: [0.05, 20]
+    site_arc_filter:  # manual fix (item 8): the cross-sections of a tunnel section and of its detour route caught both
+      Z47: {tunnel_cat: [C]}  # A15 incl. Thomassentunnel: tunnel carriageways only
+      Z148: {tunnel_cat: [""]}  # Calandbrug detour (omleidingsroute): non-tunnel arcs only
+      Z69: {tunnel_cat: [D]}  # A15 incl. Botlektunnel: tunnel carriageways only
+      Z68: {tunnel_cat: [""]}  # detour via Botlekbrug: non-tunnel arcs only
+    site_location:  # A24 Blankenburgverbinding (opened 2024, not in Regeling basisnet 2024, not in the 2024 KMZ); VGS position lies 413 m off
+      Z152: [4.27236, 51.90546]  # nearest point on the A24 carriageway to the VGS position
+    vgs:
+      xlsx: "{raw}/vgs/20261001_pl_meest_recente_tellingen_weg_tm_2025.xlsx"
+      sheet: 0
+      header_row: 2
+      first_col: 15
+      kmz: "{raw}/vgs/2024_google_earth.zip!Wegvaknummers Nederland.kmz"
+
+instances:
+  prefix: rijnmond
+  n_rep: 10
+  stratified: {name: rijnmond_strat, per_substance: 10, seed: 7}  # (review minor 4): >= 10 rows per substance
+  use_calibrated: true  # instances drawn from od_base_calibrated.csv (VGS-calibrated); arcs get flow_loaded_calibrated
+
+postprocess: null  # OSM names are already Latin script
+
+qa:
+  x_range: [0, 300000]
+  ir_reference: [1.0e-6, 1.0e-5]  # lower end: PR 10^-6 (Bkl art. 5.7 limit; Basisnet PR 10^-6 contours along A15 Z71-Z74 reach 80 m, so PR at 30 m > 1e-6); upper end assumed
+  magnitude: {method: basisnet_rank, min_spearman: 0.3, min_km: 0.5}  # (item 7): replaces the ERG-based IR band (legacy value still reported)
+  plausibility:  # hazbench.plausibility (P1 NWB lengths, P2 VGS flows)
+    nwb_gpkg: "{raw}/nwb/nwb_wegen.gpkg"
+    nwb_layer: wegvakken
+    p1_motorway_band: [0.85, 1.15]
+    p2_ratio_band: [0.67, 1.5]
+
+wkd_speed:  # hazbench.prep.wkd_speed -> per-arc legal speed limit
+  wkd_gpkg: "{raw}/wkd/snelheden_01-10-2026/Snelheden.gpkg"  # RWS Wegkenmerkendatabase, peildatum 2026-10-01
+  wkd_layer: Snelheden
+  nwb_gpkg: "{raw}/nwb/nwb_wegen.gpkg"
+  nwb_layer: wegvakken
+  sample_m: 25
+  max_dist_m: 20
+  max_angle_deg: 30
+  out: "{work}/network/wkd_speed.csv"
+
+# Release anonymisation (decision Q. Liu 2026-10-21 21:31): hazbench.release removes company / operator names from every text file of
+# the public release (data, config copies, code snapshot) and writes the id -> name mapping to a private directory outside the release.
+release:
+  redact_terms:  # in addition to all names / regexes under facilities.port_terminals (terminals, refinery_capacity, osm_polygon_exclude_name)
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+    - "[operator]"
+  redact_url_domains: [[operator page], [operator page], [operator].com, [operator page], [operator page], [operator page], [operator page], [operator page],
+                       [operator page], [operator page], [operator page], [operator page], [operator page], [operator page], [operator].com, [operator page],
+                       [operator page], [operator page], [operator page], [operator page], [operator page]
+  private_dir: "{work}/private"

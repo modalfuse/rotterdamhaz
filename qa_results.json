@@ -1,0 +1,80 @@
+[
+ {
+  "id": 1,
+  "check": "Node/arc counts and integrity",
+  "passed": true,
+  "detail": "nodes 35843, arcs 80277 (network snapshot had 80610 rows; 333 self-loop(s) removed), self-loops 0, duplicates 0"
+ },
+ {
+  "id": 2,
+  "check": "Projection",
+  "passed": true,
+  "detail": "EPSG:28992 x in [55912, 100910] m, y in [424361, 446468] m, back-projection error 3.92e-09 deg"
+ },
+ {
+  "id": 3,
+  "check": "Arc length >= straight-line distance; time > 0",
+  "passed": true,
+  "detail": "minimum ratio 0.9996; median ratio to snapshot length_km 1.0000"
+ },
+ {
+  "id": 4,
+  "check": "All OD pairs reachable on the allowed network",
+  "passed": true,
+  "detail": "unreachable OD 0; corridor length inside the network {}"
+ },
+ {
+  "id": 5,
+  "check": "Population totals consistent; PE_union <= PE_sum",
+  "passed": true,
+  "detail": "(per-arc population rounded to 0.01, tolerance 1e-4) source 2080272, pop_night 2080272, pop_day 2212342 (+ park employment 132070); baseline paths 500, PE_sum/PE_union median 2.40, range [1.00, 14.07]"
+ },
+ {
+  "id": 6,
+  "check": "Length-weighted lambda_arc = lambda_base",
+  "passed": true,
+  "detail": "weighted mean 7.761000e-09, lambda_base 7.76e-09"
+ },
+ {
+  "id": 7,
+  "check": "OD totals, gravity-model convergence, instance destination counts",
+  "passed": true,
+  "detail": "total 10^4 t {'low': 659.0, 'base': 879.0, 'high': 1099.0} (targets 659/879/1099); Furness max relative error 9.1e-07; distinct destinations 268, minimum destinations per instance 10 (K=10)"
+ },
+ {
+  "id": 8,
+  "check": "Provenance table has no empty entries",
+  "passed": true,
+  "detail": "51 rows; labels {'official': 19, 'estimated': 16, 'real': 8, 'assumed': 8}"
+ },
+ {
+  "id": 9,
+  "check": "Fixed-seed rebuild gives identical SHA256",
+  "passed": true,
+  "detail": "54 generated data files (46 CSV + 8 non-CSV: NPZ, GeoTIFF, GeoJSON) compared, 0 mismatches []"
+ },
+ {
+  "id": 10,
+  "check": "Harwood comparison basis reproduced",
+  "passed": true,
+  "detail": "max relative difference 4.96e-05"
+ },
+ {
+  "id": "M",
+  "check": "Magnitude check, revised: model release frequency per section vs Basisnet PR 10^-6 contour distance",
+  "passed": true,
+  "detail": "31 Basisnet sections (>= 0.5 km matched): Spearman rho(F, PR10-6 distance) = 0.46 (p = 0.009, threshold 0.3); sections with PR10-6 contour > 0 m: 25, median F 1.09e-04 /km/yr vs 6 sections at 0 m: 1.00e-04; AUC 0.51. Relative check only. legacy ERG-based IR(30 m) on the busiest arc 4.34e-05 (smallest flammable) to 3.69e-03 (largest toxic) per year, not tested (ERG radii are protective-action distances)"
+ },
+ {
+  "id": "P1",
+  "check": "Road length vs NWB (Rijkswaterstaat) inside the network bbox",
+  "passed": true,
+  "detail": "OSM motorway+trunk incl. links 530 km vs NWB Rijk (R) 565 km, ratio 0.94 (band [0.85, 1.15]); OSM primary+secondary 728 km vs NWB province (P) 305 km; OSM tertiary/unclassified/residential 4283 km vs NWB municipality (G) 7343 km; totals OSM 5541 km vs NWB 9160 km (ratio 0.60; OSM network excludes service/living_street/track and non-SCC parts; road-authority classes and OSM classes do not map one to one)"
+ },
+ {
+  "id": "P2",
+  "check": "Modelled vs observed DG tank-truck flows (RWS VGS sections), median ratio band [0.67, 1.5]",
+  "passed": true,
+  "detail": "class3: 37 sites, model/obs median 0.90 [IQR 0.10-1.68] before calibration, 0.99 [0.89-1.04] after; median GEH 78.5 -> 8.8; class2: 34 sites, model/obs median 1.08 [IQR 0.00-1.58] before calibration, 0.94 [0.00-1.02] after; median GEH 30.8 -> 12.6. Through traffic not generated inside the study area is not modelled"
+ }
+]

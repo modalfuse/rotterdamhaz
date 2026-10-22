@@ -1,0 +1,37 @@
+{
+  "upload_type": "dataset",
+  "title": "RotterdamHaz: A Hazmat Road Transport Risk Benchmark for the Rotterdam–Rijnmond Port and Industrial Area",
+  "version": "1.0.0",
+  "publication_date": "2026-10-22",
+  "language": "eng",
+  "access_right": "open",
+  "license": "odbl-1.0",
+  "creators": [
+    {
+      "name": "Liu, Qiang",
+      "affiliation": "Academy of Artificial Intelligence, Beijing Institute of Petrochemical Technology",
+      "orcid": "0000-0003-3699-5858"
+    }
+  ],
+  "description": "<p>RotterdamHaz is an open benchmark for hazmat road transport risk in the Rotterdam–Rijnmond port and industrial area, the Netherlands, built from Dutch and European official and open sources: a directed OSM road network (35,843 nodes, 80,277 arcs) with ADR tunnel categories, Basisnet sections and the A24 toll, per-arc release frequencies (BRON, CBS, RBM II), CBS 100 m population rasters, arc-to-cell impact sets for four substances, gravity-model OD demand calibrated and cross-validated against Rijkswaterstaat VGS dangerous-goods counts, problem instances, baselines, QA and build code.</p><p>Licences: database ODbL 1.0; rasters, parameters and documentation CC BY 4.0; code MIT (see LICENSES.md). Facilities are pseudonymised. Results are methodological, not a safety assessment.</p><p>Contact: liuq@bipt.edu.cn.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/modalfuse/rotterdamhaz",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "keywords": [
+    "RotterdamHaz",
+    "hazardous materials",
+    "hazmat routing",
+    "road transport risk",
+    "benchmark dataset",
+    "OpenStreetMap",
+    "Basisnet",
+    "Rotterdam",
+    "Netherlands"
+  ],
+  "notes": "Funding: This work was supported by the Beijing Natural Science Foundation under Grant L252031 and the Beijing Municipal Education Commission under Grant 22019821001. Repository: https://github.com/modalfuse/rotterdamhaz. DOI and arXiv ID are assigned at publication."
+}

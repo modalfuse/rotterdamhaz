@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "RotterdamHaz"
+date-released: "TBD"
+authors:
+  - family-names: "Liu"
+    given-names: "Qiang"
+    affiliation: "Academy of Artificial Intelligence, Beijing Institute of Petrochemical Technology"
+    email: "liuq@bipt.edu.cn"
+    orcid: "https://orcid.org/0000-0003-3699-5858"
+    city: "Beijing"
+    country: "CN"
+license:
+  - "ODbL-1.0"
+  - "CC-BY-4.0"
+  - "MIT"
+keywords: ["hazardous materials","hazmat routing","road transport risk","RotterdamHaz","benchmark","Rotterdam","Netherlands"]
+repository-code: "https://github.com/modalfuse/rotterdamhaz"
+# doi: assigned by Zenodo when the record is published
