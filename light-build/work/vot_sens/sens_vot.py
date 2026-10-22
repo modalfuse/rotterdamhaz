@@ -1,7 +1,6 @@
 """Value-of-time sweep for the RotterdamHaz light build.
 
 hazbench comes from code/rotterdamhaz-code-v1.0.1.tgz in the data package and must already be on PYTHONPATH.
-The downloaded package does not include OD matrices of 5 MB or larger, so this script cannot be rerun from the package alone.
 Light build (one small exposure radius, as scripts/fit_od_totals.py): network, population and facilities are built once, then the OD,
 all-or-nothing assignment and VGS calibration are redone for each value of time.
 """

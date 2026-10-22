@@ -24,7 +24,7 @@ Instance IDs keep the region prefix `rijnmond_` (region identifier used in the p
 | `DATA_DICTIONARY.md`, `data_dictionary.csv` | column dictionary |
 | `qa_results.json`, `QUALITY_REPORT.txt`, `plausibility_*.csv`, `build_log.txt` | QA |
 | `results/` | baselines (K=10, K=30, K=100), stratified baselines, cross-validation, OD sensitivity |
-| `light-build/` | total-demand fit, OD sensitivity, calibration cross-validation and the value-of-time sweep, for checking Appendix A, Appendix B and Figure 6. OD matrices of 5 MB or larger are not included. Rebuilding them requires the full pipeline in `code/rotterdamhaz-code-v1.0.1.tgz`. The scripts in `light-build/` cannot generate those matrices |
+| `light-build/` | total-demand fit, OD sensitivity, calibration cross-validation and the value-of-time sweep, for checking Appendix A, Appendix B and Figure 6 |
 | `config/` | region config, parameters, source table used for this build |
 | `code/rotterdamhaz-code-v1.0.1.tgz` | snapshot of the `hazbench` builder (no virtualenv) |
 | `requirements.txt` | pinned Python dependencies (Python 3.13, GDAL 3.12.2) |
