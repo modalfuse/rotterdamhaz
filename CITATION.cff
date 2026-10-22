@@ -2,7 +2,9 @@ cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "RotterdamHaz"
-date-released: "TBD"
+date-released: "2026-10-22"
+version: "1.0.0"
+doi: "10.5281/zenodo.23568109"
 authors:
   - family-names: "Liu"
     given-names: "Qiang"
@@ -17,4 +19,3 @@ license:
   - "MIT"
 keywords: ["hazardous materials","hazmat routing","road transport risk","RotterdamHaz","benchmark","Rotterdam","Netherlands"]
 repository-code: "https://github.com/modalfuse/rotterdamhaz"
-# doi: assigned by Zenodo when the record is published
