@@ -1,6 +1,6 @@
 # RotterdamHaz: an open benchmark dataset for hazmat road transport risk
 
-> STATUS: 1.1.0, repository https://github.com/modalfuse/rotterdamhaz.
+> STATUS: 1.1.0, repository https://github.com/modalfuse/rotterdamhaz. Dataset DOI: https://doi.org/10.5281/zenodo.23582773.
 
 ## Description
 RotterdamHaz is an open benchmark for hazardous-materials (hazmat) road transport risk in the Rotterdam–Rijnmond
@@ -47,7 +47,7 @@ The script `code/scripts/make_paper_numbers.py` also depends on intermediate res
 
 Cite this dataset archive:
 
-> Liu Q. RotterdamHaz: an open benchmark dataset for hazmat road transport risk. Zenodo.
+> Liu Q. RotterdamHaz: an open benchmark dataset for hazmat road transport risk. Zenodo. https://doi.org/10.5281/zenodo.23582773
 
 Citation metadata are also provided in `CITATION.cff`. Please cite the accompanying manuscript when referring to the scientific findings. The manuscript title is *A hazardous materials road transport risk dataset for the Rotterdam–Rijnmond port and industrial area*.
 
