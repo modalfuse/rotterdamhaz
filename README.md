@@ -41,7 +41,7 @@ Instance IDs keep the region prefix `rijnmond_` (region identifier used in the p
    Build time about 12–14 min on one CPU core for the build + baselines.
 5. Assemble with `python -m hazbench.release regions/rotterdam.yaml <out_dir> <release_dir> ...` and compare with `sha256sum -c SHA256SUMS`. A same-seed rebuild reproduces all 54 generated data files byte-for-byte (QA check 9).
 
-The script `code/scripts/make_paper_numbers.py` also depends on intermediate results that are not published in this package, and cannot produce `numbers.tex` from this package alone. Reproducing the network, the demand, the calibration and `light-build` does not use that script.
+From the package root, `python code/scripts/make_paper_numbers.py . light-build/work/sens . <out_dir>` writes `numbers.tex`. That command does not rebuild the network, the demand, the calibration or `light-build`.
 
 ## Citation
 
