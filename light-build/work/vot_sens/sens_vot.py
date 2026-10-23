@@ -1,6 +1,6 @@
 """Value-of-time sweep for the RotterdamHaz light build.
 
-hazbench comes from code/rotterdamhaz-code-v1.0.1.tgz in the data package and must already be on PYTHONPATH.
+hazbench comes from code/rotterdamhaz-code-v1.1.0.tgz in the data package and must already be on PYTHONPATH.
 Light build (one small exposure radius, as scripts/fit_od_totals.py): network, population and facilities are built once, then the OD,
 all-or-nothing assignment and VGS calibration are redone for each value of time.
 """
@@ -29,7 +29,7 @@ rows = []
 for name, f in V.items():
     P = copy.deepcopy(P0); f(P); P["beta_sens"] = [P["beta"]]; b.P = R["P"] = P
     out = work / name; shutil.rmtree(out, ignore_errors=True); out.mkdir(parents=True); b.OUT = out
-    if TM0 is not None:   # v1.0.0: toll as generalized time depends on the VoT -> rescale toll_min and rebuild the routing graphs
+    if TM0 is not None:   # toll as generalized time depends on the VoT -> rescale toll_min and rebuild the routing graphs
         fv = P0["vot_truck_eur_h"] / P["vot_truck_eur_h"]
         if abs(fv - 1) > 1e-9 or not b.arcs["toll_min"].equals(TM0):
             b.arcs["toll_min"] = (TM0 * fv).round(4); b.OUT = work / "_common"; b.facilities(); b.OUT = out

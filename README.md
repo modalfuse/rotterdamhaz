@@ -1,6 +1,6 @@
 # RotterdamHaz: an open benchmark dataset for hazmat road transport risk
 
-> STATUS: 1.0.1, repository https://github.com/modalfuse/rotterdamhaz. Dataset DOI: https://doi.org/10.5281/zenodo.23579821.
+> STATUS: 1.1.0, repository https://github.com/modalfuse/rotterdamhaz.
 
 ## Description
 RotterdamHaz is an open benchmark for hazardous-materials (hazmat) road transport risk in the Rotterdam–Rijnmond
@@ -26,7 +26,7 @@ Instance IDs keep the region prefix `rijnmond_` (region identifier used in the p
 | `results/` | baselines (K=10, K=30, K=100), stratified baselines, cross-validation, OD sensitivity |
 | `light-build/` | total-demand fit, OD sensitivity, calibration cross-validation and the value-of-time sweep, for checking Appendix A, Appendix B and Figure 6 |
 | `config/` | region config, parameters, source table used for this build |
-| `code/rotterdamhaz-code-v1.0.1.tgz` | snapshot of the `hazbench` builder (no virtualenv) |
+| `code/rotterdamhaz-code-v1.1.0.tgz` | snapshot of the `hazbench` builder (no virtualenv) |
 | `requirements.txt` | pinned Python dependencies (Python 3.13, GDAL 3.12.2) |
 | `THIRD_PARTY_DATA.md` | raw inputs not redistributed, with download URLs and licences |
 | `LICENSE` | MIT licence for the code; data licences are in `LICENSES.md` |
@@ -35,17 +35,19 @@ Instance IDs keep the region prefix `rijnmond_` (region identifier used in the p
 
 ## How to reproduce
 1. Download the raw inputs listed in `THIRD_PARTY_DATA.md` into `data_raw/` (same sub-folder layout).
-2. `tar xzf code/rotterdamhaz-code-v1.0.1.tgz && cd code && python3 -m venv .venv && .venv/bin/pip install -r requirements.lock.txt`
+2. `tar xzf code/rotterdamhaz-code-v1.1.0.tgz && cd code && python3 -m venv .venv && .venv/bin/pip install -r requirements.lock.txt`
 3. `export RIJNMOND_ROOT=<project root>; export RIJNMOND_WORK=<work dir>`
 4. `scripts/run_region.sh regions/rotterdam.yaml <out_dir>` (prep steps, build, baselines B1–B4, stats, QA; seed 42).
    Build time about 12–14 min on one CPU core for the build + baselines.
 5. Assemble with `python -m hazbench.release regions/rotterdam.yaml <out_dir> <release_dir> ...` and compare with `sha256sum -c SHA256SUMS`. A same-seed rebuild reproduces all 54 generated data files byte-for-byte (QA check 9).
 
+The script `code/scripts/make_paper_numbers.py` also depends on intermediate results that are not published in this package, and cannot produce `numbers.tex` from this package alone. Reproducing the network, the demand, the calibration and `light-build` does not use that script.
+
 ## Citation
 
 Cite this dataset archive:
 
-> Liu Q. RotterdamHaz: an open benchmark dataset for hazmat road transport risk. Zenodo. https://doi.org/10.5281/zenodo.23579821
+> Liu Q. RotterdamHaz: an open benchmark dataset for hazmat road transport risk. Zenodo.
 
 Citation metadata are also provided in `CITATION.cff`. Please cite the accompanying manuscript when referring to the scientific findings. The manuscript title is *A hazardous materials road transport risk dataset for the Rotterdam–Rijnmond port and industrial area*.
 

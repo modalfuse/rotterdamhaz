@@ -1,4 +1,4 @@
-"""Cross-validation of the VGS calibration (RotterdamHaz 1.0.0, review major comment 3).
+"""Cross-validation of the VGS calibration (RotterdamHaz).
 Light build (one small exposure radius, as scripts/fit_od_totals.py), gravity OD and AON paths once; then the calibration
 (hazbench.calibrate.run) is repeated with held-out count sections removed from the targets (cfg exclude_sites), and the
 calibrated model flow on the held-out sections is compared with the observation they did not see.

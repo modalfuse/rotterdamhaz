@@ -1,4 +1,4 @@
-"""OD sensitivity runs for RotterdamHaz (v0.3 items 2 and 4): class-2 share, refinery/port/chemical allocation and beta.
+"""OD sensitivity runs for RotterdamHaz: class-2 share, refinery/port/chemical allocation and beta.
 Light build (one small exposure radius, as scripts/fit_od_totals.py); network, population and facilities are built once, then the OD,
 AON assignment and VGS calibration are redone per variant.
   python scripts/sens_od.py regions/<region>.yaml <work_dir>
@@ -27,13 +27,13 @@ V = {"base": lambda P: None,
      "beta_1.5": lambda P: P.update(beta=1.5), "beta_2.5": lambda P: P.update(beta=2.5),
      "port_x0.5": lambda P: split(P, port=0.5), "port_x1.5": lambda P: split(P, port=1.5),
      "refinery_x0.5": lambda P: split(P, ref=0.5), "refinery_x1.5": lambda P: split(P, ref=1.5),
-     "vot_x1.5": lambda P: P.update(vot_truck_eur_h=P["vot_truck_eur_h"] * P.get("vot_sens_factor", [1.5])[0])}   # 1.0.0: hazmat VoT x 1.5 (toll weight / 1.5)
+     "vot_x1.5": lambda P: P.update(vot_truck_eur_h=P["vot_truck_eur_h"] * P.get("vot_sens_factor", [1.5])[0])}   # hazmat VoT x 1.5 (toll weight / 1.5)
 TM0 = b.arcs["toll_min"].copy() if "toll_min" in b.arcs else None
 rows = []
 for name, f in V.items():
     P = copy.deepcopy(P0); f(P); P["beta_sens"] = [P["beta"]]; b.P = R["P"] = P
     out = work / name; shutil.rmtree(out, ignore_errors=True); out.mkdir(parents=True); b.OUT = out
-    if TM0 is not None:   # 1.0.0: toll as generalized time depends on the VoT -> rescale toll_min and rebuild the routing graphs
+    if TM0 is not None:   # toll as generalized time depends on the VoT -> rescale toll_min and rebuild the routing graphs
         fv = P0["vot_truck_eur_h"] / P["vot_truck_eur_h"]
         if abs(fv - 1) > 1e-9 or not b.arcs["toll_min"].equals(TM0):
             b.arcs["toll_min"] = (TM0 * fv).round(4); b.OUT = work / "_common"; b.facilities(); b.OUT = out
