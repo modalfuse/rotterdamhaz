@@ -28,7 +28,7 @@ Full text: https://creativecommons.org/licenses/by/4.0/legalcode
 - `README.md`, `LICENSES.md`, `THIRD_PARTY_DATA.md`, `config/` (region configuration and source table)
 - `light-build/README.md` and the text logs under `light-build/`
 
-Suggested attribution: "RotterdamHaz 1.1.0, Q. Liu et al. (2026), CC BY 4.0" plus the source attributions in `THIRD_PARTY_DATA.md`
+Suggested attribution: "RotterdamHaz 1.1.0, Q. Liu (2026), CC BY 4.0" plus the source attributions in `THIRD_PARTY_DATA.md`
 (CBS and EEA require attribution; Rijkswaterstaat / PDOK inputs are CC0 or public domain).
 
 ## 3. MIT License — code
